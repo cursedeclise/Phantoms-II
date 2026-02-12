@@ -1,11 +1,19 @@
-[gd_scene load_steps=11 format=3 uid="uid://dj35ut3k6jn6s"]
+[gd_scene load_steps=14 format=3 uid="uid://dj35ut3k6jn6s"]
 
 [ext_resource type="Texture2D" uid="uid://2encpkj6anfy" path="res://Art/birdlry-running.svg" id="1_s7lge"]
 [ext_resource type="Texture2D" uid="uid://b60ugmi3xh0wm" path="res://Art/birdlry-test.svg" id="2_l8bwd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jgvrk"]
-radius = 25.0
-height = 138.0
+radius = 67.0
+height = 300.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8bwd"]
+atlas = ExtResource("1_s7lge")
+region = Rect2(0, 360, 720, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54dsf"]
+atlas = ExtResource("1_s7lge")
+region = Rect2(720, 360, 720, 360)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eok3g"]
 atlas = ExtResource("1_s7lge")
@@ -27,12 +35,23 @@ region = Rect2(1080, 0, 360, 360)
 atlas = ExtResource("1_s7lge")
 region = Rect2(1440, 0, 360, 360)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_54dsf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7lge"]
 atlas = ExtResource("2_l8bwd")
-region = Rect2(0, 0, 180, 180)
+region = Rect2(0, 0, 360, 360)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qistv"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8bwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54dsf")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_eok3g")
@@ -51,23 +70,32 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_54dsf")
+"texture": SubResource("AtlasTexture_s7lge")
 }],
 "loop": true,
 "name": &"wait",
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l8bwd"]
+radius = 42.0
+height = 208.0
+
 [node name="Birdley" type="CharacterBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Groundcollider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 23)
 shape = SubResource("CapsuleShape2D_jgvrk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_qistv")
 animation = &"wait"
+
+[node name="Damagehitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("CapsuleShape2D_l8bwd")
