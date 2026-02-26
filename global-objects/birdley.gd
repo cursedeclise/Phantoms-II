@@ -1,8 +1,8 @@
 extends CharacterBody2D
 @onready var animated_sprite=$AnimatedSprite2D
-const SPEED=600
-const JUMPVELOCITY=-800
-const GRAVITY=900
+const SPEED=800
+const JUMPVELOCITY=-1200
+const GRAVITY=1200
 
 
 func _physics_process(delta): 

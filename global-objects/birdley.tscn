@@ -101,3 +101,5 @@ animation = &"run"
 [node name="Damagehitbox" type="CollisionShape2D" parent="."]
 position = Vector2(0, 12)
 shape = SubResource("CapsuleShape2D_l8bwd")
+
+[node name="Camera2D" type="Camera2D" parent="."]

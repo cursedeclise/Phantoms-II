@@ -1,9 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://crhp1tnh8pnqx"]
+[gd_scene load_steps=5 format=4 uid="uid://crhp1tnh8pnqx"]
 
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_vpocr"]
 [ext_resource type="Texture2D" uid="uid://cngxj6cpvyqey" path="res://Art/tilemapstart.svg" id="2_ookmi"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_16h8n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ookmi"]
 texture = ExtResource("2_ookmi")
@@ -78,12 +76,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ookmi")
 
 [node name="Testingground" type="Node2D"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(588, 536)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("WorldBoundaryShape2D_16h8n")
 
 [node name="Birdley" parent="." instance=ExtResource("1_vpocr")]
 position = Vector2(581, 292)
