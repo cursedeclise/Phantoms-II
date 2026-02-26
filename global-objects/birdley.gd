@@ -29,4 +29,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		animated_sprite.play("wait")
 		velocity.y=JUMPVELOCITY
+	elif Input.is_action_just_pressed("jump") and is_on_wall():
+		animated_sprite.play("wait")
+		velocity.y=JUMPVELOCITY
+		#velocity.x=(3*SPEED)*(direction*-1)
+		
 	move_and_slide()
