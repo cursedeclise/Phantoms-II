@@ -1,9 +1,9 @@
 extends CharacterBody2D
 @onready var animated_sprite=$AnimatedSprite2D
 const JUMPVELOCITY=-1200
-const GRAVITY=1800
-const TOPSPEED=1200
-const ACC=2000
+const GRAVITY=2000
+const TOPSPEED=2000
+const ACC=2500
 var speed=0
 
 func _physics_process(delta): 
@@ -17,7 +17,8 @@ func _physics_process(delta):
 	
 	if abs(velocity.x)<TOPSPEED:
 		speed+=ACC
-	
+	if abs(velocity.x)>TOPSPEED:
+		speed-=(0.2*ACC)
 	if Input.is_action_pressed("walkright"):
 		direction=1
 		animated_sprite.play("run")
@@ -39,6 +40,6 @@ func _physics_process(delta):
 	elif Input.is_action_just_pressed("jump") and is_on_wall():
 		animated_sprite.play("wait")
 		velocity.y=JUMPVELOCITY
-		velocity.x=(2*speed)*(direction*-1)*delta
+		velocity.x=(2*TOPSPEED)*(direction*-1)*delta
 		
 	move_and_slide()
