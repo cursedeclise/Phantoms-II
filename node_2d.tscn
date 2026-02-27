@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxc8m7tf8r8c3"]
+[gd_scene load_steps=5 format=3 uid="uid://dxc8m7tf8r8c3"]
 
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://cngxj6cpvyqey" path="res://Art/tilemapstart.svg" id="2_0e48y"]
+[ext_resource type="Texture2D" uid="uid://cn27ptb1n31r3" path="res://Art/robot guy 2.svg" id="3_epypp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
 size = Vector2(1149, 119)
@@ -23,3 +24,6 @@ position = Vector2(574.5, 583.5)
 shape = SubResource("RectangleShape2D_0e48y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(796, 333)
+scale = Vector2(0.58564234, 0.51513803)
+texture = ExtResource("3_epypp")
