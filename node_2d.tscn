@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxc8m7tf8r8c3"]
+
+[ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://cngxj6cpvyqey" path="res://Art/tilemapstart.svg" id="2_0e48y"]
+[ext_resource type="Texture2D" uid="uid://cn27ptb1n31r3" path="res://Art/robot guy 2.svg" id="3_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(1149, 119)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Birdley" parent="." instance=ExtResource("1_wtcfe")]
+position = Vector2(319, 227)
+
+[node name="Tilemapstart" type="Sprite2D" parent="."]
+position = Vector2(580, 584)
+scale = Vector2(1.0574075, 0.106944405)
+texture = ExtResource("2_0e48y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(574.5, 583.5)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(796, 333)
+scale = Vector2(0.58564234, 0.51513803)
+texture = ExtResource("3_epypp")
