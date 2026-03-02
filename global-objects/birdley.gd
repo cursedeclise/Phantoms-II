@@ -5,6 +5,9 @@ const GRAVITY=2000
 const TOPSPEED=2000
 const ACC=2500
 var speed=0
+var health=100
+var iframes=false
+
 
 func _physics_process(delta): 
 	var direction=0
@@ -46,3 +49,22 @@ func _physics_process(delta):
 		velocity.x=(2*TOPSPEED)*(direction*-1)*delta
 		
 	move_and_slide()
+
+
+@warning_ignore("unused_parameter")
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	health-=10
+	iframes=true
+	print("collision!!! health is now "+str(health))
+	
+	if health <=0:
+		print("You died lol")
+		get_tree().paused = true
+	else:
+		print("Iframes on")
+
+
+@warning_ignore("unused_parameter")
+func _on_area_2d_2_body_exited(body: Node2D) -> void:
+	iframes=false
+	print("Iframes off")

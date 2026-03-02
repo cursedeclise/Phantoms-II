@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://dj35ut3k6jn6s"]
+[gd_scene load_steps=16 format=3 uid="uid://dj35ut3k6jn6s"]
 
 [ext_resource type="Script" uid="uid://dh1ijxtj5genf" path="res://global-objects/birdley.gd" id="1_l8bwd"]
 [ext_resource type="Texture2D" uid="uid://2encpkj6anfy" path="res://Art/birdlry-running.svg" id="1_s7lge"]
 [ext_resource type="Texture2D" uid="uid://b60ugmi3xh0wm" path="res://Art/birdlry-test.svg" id="2_l8bwd"]
+[ext_resource type="Script" uid="uid://kxaf8ihoel6k" path="res://global-objects/area_2d.gd" id="4_eok3g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jgvrk"]
 radius = 67.0
@@ -98,9 +99,14 @@ position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_qistv")
 animation = &"run"
 
-[node name="Damagehitbox" type="CollisionShape2D" parent="."]
-position = Vector2(0, 12)
-shape = SubResource("CapsuleShape2D_l8bwd")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_speed = 2.5
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("4_eok3g")
+
+[node name="Damagehitbox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 12)
+shape = SubResource("CapsuleShape2D_l8bwd")
