@@ -15,10 +15,13 @@ func _physics_process(delta):
 	else: #gravity if no floor
 		velocity.y+=GRAVITY*delta
 	
-	if abs(velocity.x)<TOPSPEED:
+	if abs(velocity.x)<TOPSPEED and not is_on_wall():
 		speed+=ACC
+	#elif abs(velocity.x) and is_on_wall():
+		#speed+=0.5*ACC
 	if abs(velocity.x)>TOPSPEED:
 		speed-=(0.2*ACC)
+		
 	if Input.is_action_pressed("walkright"):
 		direction=1
 		animated_sprite.play("run")
