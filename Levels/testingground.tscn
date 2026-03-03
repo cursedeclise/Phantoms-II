@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_vpocr"]
 [ext_resource type="Texture2D" uid="uid://cngxj6cpvyqey" path="res://Art/tilemapstart.svg" id="2_ookmi"]
 [ext_resource type="PackedScene" uid="uid://yxl2s8akkjwo" path="res://global-objects/robot_enemy.tscn" id="3_luj72"]
+[ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://coin.tscn" id="4_0jwuf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ookmi"]
 texture = ExtResource("2_ookmi")
@@ -76,10 +77,6 @@ tile_size = Vector2i(180, 180)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ookmi")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_luj72"]
-radius = 79.0
-height = 328.0
-
 [node name="Testingground" type="Node2D"]
 
 [node name="Birdley" parent="." instance=ExtResource("1_vpocr")]
@@ -92,12 +89,10 @@ tile_set = SubResource("TileSet_luj72")
 [node name="Robot-enemy" parent="." instance=ExtResource("3_luj72")]
 position = Vector2(1331, 1712)
 
-[node name="robothitbox" type="Area2D" parent="Robot-enemy"]
-position = Vector2(2, 0)
+[node name="coin" parent="." instance=ExtResource("4_0jwuf")]
+position = Vector2(1718, 120)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Robot-enemy/robothitbox"]
-position = Vector2(7, 0)
-shape = SubResource("CapsuleShape2D_luj72")
+[node name="Coin" parent="." instance=ExtResource("4_0jwuf")]
+position = Vector2(-446, 1549)
 
-[connection signal="body_entered" from="Robot-enemy/robothitbox" to="Birdley" method="_on_area_2d_2_body_entered"]
-[connection signal="body_exited" from="Robot-enemy/robothitbox" to="Birdley" method="_on_area_2d_2_body_exited"]
+[connection signal="body_entered" from="coin" to="Birdley" method="_on_area_2d_body_entered"]
