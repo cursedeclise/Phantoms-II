@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 Globalvars="*res://Globalvars.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/scale=0.5
+
 [input]
 
 jump={

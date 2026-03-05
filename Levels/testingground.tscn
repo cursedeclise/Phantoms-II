@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_vpocr"]
 [ext_resource type="Texture2D" uid="uid://cngxj6cpvyqey" path="res://Art/tilemapstart.svg" id="2_ookmi"]
 [ext_resource type="PackedScene" uid="uid://yxl2s8akkjwo" path="res://global-objects/robot_enemy.tscn" id="3_luj72"]
-[ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://coin.tscn" id="4_0jwuf"]
+[ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="4_0jwuf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ookmi"]
 texture = ExtResource("2_ookmi")
