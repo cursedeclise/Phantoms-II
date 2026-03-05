@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="252.51311"
-   height="35.18877"
-   viewBox="0 0 66.810758 9.3103621"
+   width="506.07675"
+   height="70.523941"
+   viewBox="0 0 133.89947 18.659459"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      showgrid="true"
-     inkscape:zoom="4"
-     inkscape:cx="122.375"
-     inkscape:cy="52.875"
+     inkscape:zoom="2"
+     inkscape:cx="175.25"
+     inkscape:cy="72.25"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="-8"
@@ -36,8 +36,8 @@
     <inkscape:grid
        id="grid1"
        units="px"
-       originx="-15.14392"
-       originy="-14.229289"
+       originx="-35.350949"
+       originy="-28.693664"
        spacingx="4.7624999"
        spacingy="19.05"
        empcolor="#0099e5"
@@ -54,13 +54,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-15.14392,-14.229289)">
+     transform="translate(-37.10357,-32.928514)">
     <rect
-       style="fill:#9c0000;fill-opacity:1;fill-rule:evenodd;stroke:#112740;stroke-width:0.132292"
+       style="fill:#9c0000;fill-opacity:1;fill-rule:evenodd;stroke:#112740;stroke-width:0.265134"
        id="rect18"
-       width="66.678467"
-       height="9.1780701"
-       x="15.210066"
-       y="14.295435" />
+       width="133.63434"
+       height="18.394325"
+       x="37.236137"
+       y="33.061081" />
   </g>
 </svg>

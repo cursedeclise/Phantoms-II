@@ -22,5 +22,5 @@ value = 120.0
 texture_under = ExtResource("1_7bwy2")
 texture_over = ExtResource("1_jdrnv")
 texture_progress = ExtResource("2_ovdqn")
-texture_progress_offset = Vector2(57.237, 53.78)
+texture_progress_offset = Vector2(133.61, 107.448)
 script = ExtResource("3_ovdqn")

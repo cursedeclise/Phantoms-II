@@ -53,4 +53,8 @@ func _physics_process(delta):
 		velocity.y=JUMPVELOCITY
 		velocity.x=(2*TOPSPEED)*(direction*-1)*delta
 		
+	if Globalvars.playerhealth<=0:
+		get_tree().paused=true
+		print("You died :(")
+	
 	move_and_slide()
