@@ -20,3 +20,11 @@ func _on_area_entered(area: Area2D) -> void:
 		Globalvars.wait(1)
 		Globalvars.iframes=false
 		print("iframes off")
+	if area.name == "deathzone" and Globalvars.iframes==false:
+		Globalvars.playerhealth-=5
+		Globalvars.iframes=true
+		print("health: "+ str(Globalvars.playerhealth))
+		print("iframes on")
+		await get_tree().create_timer(0.5).timeout
+		Globalvars.iframes=false
+		print("iframes off")
