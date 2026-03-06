@@ -5,7 +5,6 @@ const GRAVITY=2000
 const TOPSPEED=2000
 const ACC=2500
 var speed=0
-var iframes=false
 var airjumps=2
 
 func _physics_process(delta): 
@@ -21,7 +20,7 @@ func _physics_process(delta):
 	if abs(velocity.x)<TOPSPEED and not is_on_wall():
 		speed+=ACC
 	elif abs(velocity.x)<TOPSPEED and is_on_wall():
-		speed+=0.5*ACC
+		speed+=0.01*ACC
 	if abs(velocity.x)>=TOPSPEED:
 		speed-=(0.2*ACC)
 		
