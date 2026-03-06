@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://dj35ut3k6jn6s"]
+[gd_scene load_steps=17 format=3 uid="uid://dj35ut3k6jn6s"]
 
 [ext_resource type="Script" uid="uid://dh1ijxtj5genf" path="res://global-objects/birdley.gd" id="1_l8bwd"]
 [ext_resource type="Texture2D" uid="uid://2encpkj6anfy" path="res://Art/birdlry-running.svg" id="1_s7lge"]
 [ext_resource type="Texture2D" uid="uid://b60ugmi3xh0wm" path="res://Art/birdlry-test.svg" id="2_l8bwd"]
 [ext_resource type="PackedScene" uid="uid://cn0c73mo38gdl" path="res://global-objects/healthbar.tscn" id="4_eok3g"]
+[ext_resource type="Script" uid="uid://07l0gu58gkqh" path="res://global-objects/Birdleyhitbox.gd" id="4_o561e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jgvrk"]
 radius = 67.0
@@ -111,6 +112,7 @@ drag_bottom_margin = 0.05
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 3
+script = ExtResource("4_o561e")
 
 [node name="Damagehitbox" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 12)
@@ -119,3 +121,5 @@ shape = SubResource("CapsuleShape2D_l8bwd")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("4_eok3g")]
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
