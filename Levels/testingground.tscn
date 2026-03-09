@@ -105,6 +105,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deathzone"]
+position = Vector2(1870, -616)
 shape = SubResource("CircleShape2D_0jwuf")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
