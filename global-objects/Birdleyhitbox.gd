@@ -4,7 +4,9 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+	
 func wait(sec):
+	# don't use!!! just copy it
 	await get_tree().create_timer(sec).timeout
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,7 +20,7 @@ func _on_area_entered(area: Area2D) -> void:
 		Globalvars.iframes=true
 		print("health: "+ str(Globalvars.playerhealth))
 		print("iframes on")
-		wait(1)
+		await get_tree().create_timer(1).timeout
 		Globalvars.iframes=false
 		print("iframes off")
 	if area.name == "deathzone" and Globalvars.iframes==false:
