@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cngxj6cpvyqey" path="res://Art/tilemapstart.svg" id="2_ookmi"]
 [ext_resource type="PackedScene" uid="uid://yxl2s8akkjwo" path="res://global-objects/robot_enemy.tscn" id="3_luj72"]
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="4_0jwuf"]
-[ext_resource type="Texture2D" uid="uid://dl6pqirq3au2n" path="res://Art/background.svg" id="5_ssmhc"]
+[ext_resource type="Texture2D" uid="uid://cqvyoqlri8cwu" path="res://Art/bramblebackground.svg" id="5_ssmhc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ookmi"]
 texture = ExtResource("2_ookmi")
@@ -112,9 +112,8 @@ shape = SubResource("CircleShape2D_0jwuf")
 layer = -1
 follow_viewport_scale = 5.0
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(1157, 649)
-scale = Vector2(1.782362, 1.782362)
+[node name="Bramblebackground" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1920, 1080)
 texture = ExtResource("5_ssmhc")
 
 [connection signal="body_entered" from="coin" to="Birdley" method="_on_area_2d_body_entered"]
