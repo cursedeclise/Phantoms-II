@@ -15,7 +15,9 @@ func _process(_delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	if area.name == "Dart" and Globalvars.iframes==false:
+	if area.is_in_group("dealsDamage") and Globalvars.iframes==false:
+		if area.name==("robot"):
+			Globalvars.playerhealth-=5
 		Globalvars.playerhealth-=5
 		Globalvars.iframes=true
 		print("health: "+ str(Globalvars.playerhealth))
@@ -23,11 +25,12 @@ func _on_area_entered(area: Area2D) -> void:
 		await get_tree().create_timer(1).timeout
 		Globalvars.iframes=false
 		print("iframes off")
-	if area.name == "deathzone" and Globalvars.iframes==false:
-		Globalvars.playerhealth-=5
-		Globalvars.iframes=true
-		print("health: "+ str(Globalvars.playerhealth))
-		print("iframes on")
-		await get_tree().create_timer(1).timeout
-		Globalvars.iframes=false
-		print("iframes off")
+	
+	#if area.name == "deathzone" and Globalvars.iframes==false:
+		#Globalvars.playerhealth-=5
+		#Globalvars.iframes=true
+		#print("health: "+ str(Globalvars.playerhealth))
+		#print("iframes on")
+		#await get_tree().create_timer(1).timeout
+		#Globalvars.iframes=false
+		#print("iframes off")

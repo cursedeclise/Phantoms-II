@@ -85,10 +85,10 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0qn5"]
-radius = 70.0
+radius = 95.0
 height = 274.0
 
-[node name="Robot-enemy" type="CharacterBody2D"]
+[node name="Robot-enemy" type="CharacterBody2D" groups=["takesDamage"]]
 script = ExtResource("1_e05mh")
 
 [node name="groundhitbox" type="CollisionShape2D" parent="."]
@@ -101,14 +101,14 @@ animation = &"walk"
 frame = 3
 frame_progress = 1.0
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="robot" type="Area2D" parent="." groups=["dealsDamage"]]
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("3_p0qn5")
 
-[node name="damagehitbox" type="CollisionShape2D" parent="Area2D"]
+[node name="damagehitbox" type="CollisionShape2D" parent="robot" groups=["dealsDamage"]]
 position = Vector2(6, 15)
 shape = SubResource("CapsuleShape2D_p0qn5")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="robot" to="robot" method="_on_body_entered"]
+[connection signal="body_exited" from="robot" to="robot" method="_on_body_exited"]

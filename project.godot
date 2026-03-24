@@ -26,6 +26,11 @@ window/size/viewport_height=1080
 window/stretch/mode="viewport"
 window/stretch/scale=0.5
 
+[global_group]
+
+takesDamage=""
+dealsDamage=""
+
 [input]
 
 jump={

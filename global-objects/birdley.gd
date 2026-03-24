@@ -1,14 +1,16 @@
 extends CharacterBody2D
 @onready var animated_sprite=$AnimatedSprite2D
+@export var Spear : PackedScene
+
 const JUMPVELOCITY=-1200
 const GRAVITY=2000
 const TOPSPEED=2000
 const ACC=2500
 var speed=0
 var airjumps=2
-
+var direction=0
 func _physics_process(delta): 
-	var direction=0
+	direction=0
 	
 	
 	if is_on_floor(): #no gravity on floor
@@ -55,5 +57,12 @@ func _physics_process(delta):
 	if Globalvars.playerhealth<=0:
 		get_tree().paused=true
 		print("You died :(")
+	if Input.is_action_just_pressed("Primary"):
+		shoot()
 	
 	move_and_slide()
+func shoot():
+	var b = Spear.instantiate()
+	add_child(b)
+	b.direction= direction
+	b.transform = $Marker2D.transform
