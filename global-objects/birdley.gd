@@ -6,9 +6,14 @@ const JUMPVELOCITY=-1200
 const GRAVITY=2000
 const TOPSPEED=2000
 const ACC=2500
+var atkCooldown=0.33
 var speed=0
 var airjumps=2
 var direction=0
+var lastfacing=1
+var attackready=true
+
+
 func _physics_process(delta): 
 	direction=0
 	
@@ -28,9 +33,11 @@ func _physics_process(delta):
 		
 	if Input.is_action_pressed("walkright"):
 		direction=1
+		lastfacing=1
 		animated_sprite.play("run")
 	elif Input.is_action_pressed("walkleft"):
 		direction=-1
+		lastfacing=-1
 		animated_sprite.play("run")
 	
 	velocity.x=speed*direction*delta
@@ -62,7 +69,11 @@ func _physics_process(delta):
 	
 	move_and_slide()
 func shoot():
-	var b = Spear.instantiate()
-	add_child(b)
-	b.direction= direction
-	b.transform = $Marker2D.transform
+	if attackready==true:
+		attackready=false
+		var b = Spear.instantiate()
+		add_child(b)
+		b.direction= lastfacing
+		b.transform = $Marker2D.transform
+		await get_tree().create_timer(atkCooldown).timeout
+		attackready=true

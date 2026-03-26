@@ -5,5 +5,13 @@ func _on_body_entered(body):
 	if body.name == "Birdley":
 		Globalvars.score+=1
 		print(Globalvars.score)
-		# Add sound effect here if needed
-		queue_free() # Safely removes the coin [2]
+		# insert sound here
+		queue_free() #uncoins your coin
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.name == "Spear":
+		Globalvars.score+=1
+		print(Globalvars.score)
+		# pretend there's a cooler sound here. like with a cling or something
+		queue_free()

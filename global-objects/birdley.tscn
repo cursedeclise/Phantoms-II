@@ -1,8 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dj35ut3k6jn6s"]
+[gd_scene load_steps=16 format=3 uid="uid://dj35ut3k6jn6s"]
 
 [ext_resource type="Script" uid="uid://dh1ijxtj5genf" path="res://global-objects/birdley.gd" id="1_l8bwd"]
-[ext_resource type="Texture2D" uid="uid://2encpkj6anfy" path="res://Art/birdlry-running.svg" id="1_s7lge"]
 [ext_resource type="Texture2D" uid="uid://b60ugmi3xh0wm" path="res://Art/birdlry-test.svg" id="2_l8bwd"]
+[ext_resource type="Texture2D" uid="uid://dabp2fp8iyerp" path="res://Art/Copy of birdlry-running.svg" id="3_txgmc"]
 [ext_resource type="PackedScene" uid="uid://cn0c73mo38gdl" path="res://global-objects/healthbar.tscn" id="4_eok3g"]
 [ext_resource type="Script" uid="uid://07l0gu58gkqh" path="res://global-objects/Birdleyhitbox.gd" id="4_o561e"]
 [ext_resource type="PackedScene" uid="uid://b3d0h0lkw0nyq" path="res://global-objects/spear.tscn" id="6_txgmc"]
@@ -11,32 +11,24 @@
 radius = 67.0
 height = 300.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l8bwd"]
-atlas = ExtResource("1_s7lge")
-region = Rect2(0, 360, 720, 360)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_54dsf"]
-atlas = ExtResource("1_s7lge")
-region = Rect2(720, 360, 720, 360)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eok3g"]
-atlas = ExtResource("1_s7lge")
+[sub_resource type="AtlasTexture" id="AtlasTexture_34r8e"]
+atlas = ExtResource("3_txgmc")
 region = Rect2(0, 0, 360, 360)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o561e"]
-atlas = ExtResource("1_s7lge")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi426"]
+atlas = ExtResource("3_txgmc")
 region = Rect2(360, 0, 360, 360)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_txgmc"]
-atlas = ExtResource("1_s7lge")
+[sub_resource type="AtlasTexture" id="AtlasTexture_54dsf"]
+atlas = ExtResource("3_txgmc")
 region = Rect2(720, 0, 360, 360)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_34r8e"]
-atlas = ExtResource("1_s7lge")
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6pyh"]
+atlas = ExtResource("3_txgmc")
 region = Rect2(1080, 0, 360, 360)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wi426"]
-atlas = ExtResource("1_s7lge")
+[sub_resource type="AtlasTexture" id="AtlasTexture_086s2"]
+atlas = ExtResource("3_txgmc")
 region = Rect2(1440, 0, 360, 360)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s7lge"]
@@ -45,32 +37,26 @@ region = Rect2(0, 0, 360, 360)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qistv"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l8bwd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_54dsf")
-}],
+"frames": [],
 "loop": false,
 "name": &"dash",
 "speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eok3g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o561e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_txgmc")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_34r8e")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wi426")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54dsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6pyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_086s2")
 }],
 "loop": false,
 "name": &"run",
@@ -90,6 +76,7 @@ radius = 42.0
 height = 208.0
 
 [node name="Birdley" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_l8bwd")
 Spear = ExtResource("6_txgmc")
 metadata/_edit_lock_ = true
@@ -126,5 +113,7 @@ shape = SubResource("CapsuleShape2D_l8bwd")
 [node name="Control" parent="CanvasLayer" instance=ExtResource("4_eok3g")]
 
 [node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 40)
+rotation = -1.5707964
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
