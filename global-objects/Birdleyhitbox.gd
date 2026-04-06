@@ -19,6 +19,7 @@ func _on_area_entered(area: Area2D) -> void:
 		if area.name==("robot"):
 			Globalvars.playerhealth-=5
 		Globalvars.playerhealth-=5
+		Globalvars.score-=1
 		Globalvars.iframes=true
 		print("health: "+ str(Globalvars.playerhealth))
 		print("iframes on")
