@@ -4,6 +4,5 @@
 
 [resource]
 font = SubResource("FontVariation_i1pf5")
-font_size = 27
-font_color = Color(0, 0, 0, 1)
-outline_size = 1
+font_size = 26
+font_color = Color(0.003921569, 0, 0, 1)
