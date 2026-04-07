@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://iuj030neqqhs"]
+
+[sub_resource type="FontVariation" id="FontVariation_i1pf5"]
+
+[resource]
+font = SubResource("FontVariation_i1pf5")
+font_size = 26
+font_color = Color(0.003921569, 0, 0, 1)

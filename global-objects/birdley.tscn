@@ -111,6 +111,7 @@ shape = SubResource("CapsuleShape2D_l8bwd")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("4_eok3g")]
+scale = Vector2(1.3623202, 1.3623202)
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(0, 40)
