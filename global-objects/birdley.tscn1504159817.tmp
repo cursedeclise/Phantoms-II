@@ -1,27 +1,16 @@
-[gd_scene load_steps=23 format=3 uid="uid://dj35ut3k6jn6s"]
+[gd_scene load_steps=17 format=3 uid="uid://dj35ut3k6jn6s"]
 
 [ext_resource type="Script" uid="uid://dh1ijxtj5genf" path="res://global-objects/birdley.gd" id="1_l8bwd"]
 [ext_resource type="Texture2D" uid="uid://b60ugmi3xh0wm" path="res://Art/birdlry-test.svg" id="2_l8bwd"]
-[ext_resource type="Script" uid="uid://cea81bg0wxmok" path="res://global-objects/groundcollider.gd" id="3_34r8e"]
 [ext_resource type="Texture2D" uid="uid://dabp2fp8iyerp" path="res://Art/Copy of birdlry-running.svg" id="3_txgmc"]
 [ext_resource type="PackedScene" uid="uid://cn0c73mo38gdl" path="res://global-objects/healthbar.tscn" id="4_eok3g"]
 [ext_resource type="Script" uid="uid://07l0gu58gkqh" path="res://global-objects/Birdleyhitbox.gd" id="4_o561e"]
+[ext_resource type="Script" uid="uid://bhvtbgak733xg" path="res://global-objects/birdlercamera.gd" id="5_34r8e"]
 [ext_resource type="PackedScene" uid="uid://b3d0h0lkw0nyq" path="res://global-objects/spear.tscn" id="6_txgmc"]
-[ext_resource type="Script" uid="uid://boaho6ihx42o3" path="res://global-objects/dashcollider.gd" id="8_wi426"]
-[ext_resource type="Script" uid="uid://com2xrgdpxm5i" path="res://global-objects/dashcolliderdamage.gd" id="9_54dsf"]
-[ext_resource type="Script" uid="uid://c7wih2h3c87ev" path="res://global-objects/dashcollidercollider.gd" id="10_q6pyh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jgvrk"]
 radius = 67.0
 height = 300.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_txgmc"]
-atlas = ExtResource("3_txgmc")
-region = Rect2(0, 360, 720, 360)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_68b6p"]
-atlas = ExtResource("3_txgmc")
-region = Rect2(720, 360, 720, 360)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_34r8e"]
 atlas = ExtResource("3_txgmc")
@@ -49,13 +38,7 @@ region = Rect2(0, 0, 360, 360)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qistv"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_txgmc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_68b6p")
-}],
+"frames": [],
 "loop": false,
 "name": &"dash",
 "speed": 12.0
@@ -93,9 +76,6 @@ animations = [{
 radius = 42.0
 height = 208.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_54dsf"]
-size = Vector2(704, 20)
-
 [node name="Birdley" type="CharacterBody2D"]
 z_index = 1
 script = ExtResource("1_l8bwd")
@@ -105,22 +85,21 @@ metadata/_edit_lock_ = true
 [node name="Groundcollider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 23)
 shape = SubResource("CapsuleShape2D_jgvrk")
-script = ExtResource("3_34r8e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_qistv")
-animation = &"dash"
+animation = &"run"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(5, 0)
 position_smoothing_speed = 10.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-drag_left_margin = 0.0
+drag_left_margin = 0.1
 drag_top_margin = 0.1
-drag_right_margin = 0.0
+drag_right_margin = 0.1
 drag_bottom_margin = 0.1
+script = ExtResource("5_34r8e")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
@@ -140,16 +119,4 @@ scale = Vector2(1.3623202, 1.3623202)
 position = Vector2(0, 40)
 rotation = -1.5707964
 
-[node name="Dashcolliderground" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(152, 8, -104, 8, -104, -8, 152, -8)
-script = ExtResource("8_wi426")
-
-[node name="dashcolliderdamage" type="Area2D" parent="."]
-script = ExtResource("9_54dsf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dashcolliderdamage"]
-shape = SubResource("RectangleShape2D_54dsf")
-script = ExtResource("10_q6pyh")
-
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
-[connection signal="body_entered" from="dashcolliderdamage" to="dashcolliderdamage" method="_on_body_entered"]

@@ -30,6 +30,7 @@ texture_progress_offset = Vector2(133.61, 107.448)
 script = ExtResource("3_ovdqn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+z_index = -6
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

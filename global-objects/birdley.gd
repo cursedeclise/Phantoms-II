@@ -2,6 +2,7 @@ extends CharacterBody2D
 @onready var animated_sprite=$AnimatedSprite2D
 @export var Spear : PackedScene
 
+
 const JUMPVELOCITY=-1200
 const GRAVITY=2000
 const TOPSPEED=2000
@@ -15,15 +16,18 @@ var lastfacing=1
 var attackready=true
 
 
+
 func _physics_process(delta): 
 	direction=0
 	
 	
-	if is_on_floor(): #no gravity on floor
+	if is_on_floor() : #no gravity on floor
 		velocity.y=0
 		airjumps=2
-	else: #gravity if no floor
+	elif Globalvars.dashing==false: #gravity if no floor
 		velocity.y+=GRAVITY*delta
+	else:
+		velocity.y=0
 	
 	if abs(velocity.x)<TOPSPEED and not is_on_wall():
 		speed+=ACC
@@ -32,13 +36,16 @@ func _physics_process(delta):
 	if abs(velocity.x)>=TOPSPEED:
 		speed-=(0.2*ACC)
 		
-	if Input.is_action_pressed("walkright"):
+	if Input.is_action_pressed("walkright") and Globalvars.dashing==false:
 		direction=1
 		lastfacing=1
+
 		animated_sprite.play("run")
-	elif Input.is_action_pressed("walkleft"):
+	elif Input.is_action_pressed("walkleft") and Globalvars.dashing==false:
 		direction=-1
 		lastfacing=-1
+	
+		
 		animated_sprite.play("run")
 	
 	velocity.x=speed*direction*delta
@@ -70,11 +77,18 @@ func _physics_process(delta):
 		
 	if Input.is_action_pressed("Utility"):
 		velocity.x=dashspeed*lastfacing
-		
+		animated_sprite.play("dash")
+		Globalvars.dashing=true
+		Globalvars.iframes=true
+
 	if Input.is_action_just_released("Utility"):
 		@warning_ignore("integer_division")
 		velocity.x=(dashspeed/2)*delta
 		airjumps=2
+		Globalvars.dashing=false
+		Globalvars.iframes=false
+		
+		
 	
 	move_and_slide()
 func shoot():
