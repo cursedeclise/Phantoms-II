@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://dj35ut3k6jn6s"]
+[gd_scene load_steps=17 format=3 uid="uid://dj35ut3k6jn6s"]
 
 [ext_resource type="Script" uid="uid://dh1ijxtj5genf" path="res://global-objects/birdley.gd" id="1_l8bwd"]
 [ext_resource type="Texture2D" uid="uid://b60ugmi3xh0wm" path="res://Art/birdlry-test.svg" id="2_l8bwd"]
 [ext_resource type="Texture2D" uid="uid://dabp2fp8iyerp" path="res://Art/Copy of birdlry-running.svg" id="3_txgmc"]
 [ext_resource type="PackedScene" uid="uid://cn0c73mo38gdl" path="res://global-objects/healthbar.tscn" id="4_eok3g"]
 [ext_resource type="Script" uid="uid://07l0gu58gkqh" path="res://global-objects/Birdleyhitbox.gd" id="4_o561e"]
+[ext_resource type="Script" uid="uid://bhvtbgak733xg" path="res://global-objects/birdlercamera.gd" id="5_34r8e"]
 [ext_resource type="PackedScene" uid="uid://b3d0h0lkw0nyq" path="res://global-objects/spear.tscn" id="6_txgmc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jgvrk"]
@@ -91,13 +92,15 @@ sprite_frames = SubResource("SpriteFrames_qistv")
 animation = &"run"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-limit_enabled = false
+limit_smoothed = true
+position_smoothing_speed = 10.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-drag_left_margin = 0.05
-drag_top_margin = 0.05
-drag_right_margin = 0.05
-drag_bottom_margin = 0.05
+drag_left_margin = 0.1
+drag_top_margin = 0.1
+drag_right_margin = 0.1
+drag_bottom_margin = 0.1
+script = ExtResource("5_34r8e")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2

@@ -8,6 +8,7 @@ const TOPSPEED=2000
 const ACC=2500
 var atkCooldown=0.33
 var speed=0
+var dashspeed=6000
 var airjumps=2
 var direction=0
 var lastfacing=1
@@ -66,6 +67,14 @@ func _physics_process(delta):
 		print("You died :(")
 	if Input.is_action_just_pressed("Primary"):
 		shoot()
+		
+	if Input.is_action_pressed("Utility"):
+		velocity.x=dashspeed*lastfacing
+		
+	if Input.is_action_just_released("Utility"):
+		@warning_ignore("integer_division")
+		velocity.x=(dashspeed/2)*delta
+		airjumps=2
 	
 	move_and_slide()
 func shoot():
