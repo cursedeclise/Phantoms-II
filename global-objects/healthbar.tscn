@@ -75,3 +75,8 @@ offset_bottom = 453.0
 text = "(insert score)"
 label_settings = ExtResource("6_jd2ud")
 script = ExtResource("8_qah0h")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
