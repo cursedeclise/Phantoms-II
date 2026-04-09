@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dj35ut3k6jn6s"]
+[gd_scene load_steps=24 format=3 uid="uid://dj35ut3k6jn6s"]
 
 [ext_resource type="Script" uid="uid://dh1ijxtj5genf" path="res://global-objects/birdley.gd" id="1_l8bwd"]
 [ext_resource type="Texture2D" uid="uid://b60ugmi3xh0wm" path="res://Art/birdlry-test.svg" id="2_l8bwd"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dabp2fp8iyerp" path="res://Art/Copy of birdlry-running.svg" id="3_txgmc"]
 [ext_resource type="PackedScene" uid="uid://cn0c73mo38gdl" path="res://global-objects/healthbar.tscn" id="4_eok3g"]
 [ext_resource type="Script" uid="uid://07l0gu58gkqh" path="res://global-objects/Birdleyhitbox.gd" id="4_o561e"]
+[ext_resource type="Script" uid="uid://vls7fm4gpysy" path="res://global-objects/birdcam.gd" id="6_086s2"]
 [ext_resource type="PackedScene" uid="uid://b3d0h0lkw0nyq" path="res://global-objects/spear.tscn" id="6_txgmc"]
 [ext_resource type="Script" uid="uid://boaho6ihx42o3" path="res://global-objects/dashcollider.gd" id="8_wi426"]
 [ext_resource type="Script" uid="uid://com2xrgdpxm5i" path="res://global-objects/dashcolliderdamage.gd" id="9_54dsf"]
@@ -100,7 +101,6 @@ size = Vector2(704, 20)
 z_index = 1
 script = ExtResource("1_l8bwd")
 Spear = ExtResource("6_txgmc")
-metadata/_edit_lock_ = true
 
 [node name="Groundcollider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 23)
@@ -121,6 +121,7 @@ drag_left_margin = 0.0
 drag_top_margin = 0.1
 drag_right_margin = 0.0
 drag_bottom_margin = 0.1
+script = ExtResource("6_086s2")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
