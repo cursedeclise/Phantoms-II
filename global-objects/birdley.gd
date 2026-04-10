@@ -80,17 +80,20 @@ func _physics_process(delta):
 		animated_sprite.play("dash")
 		Globalvars.dashing=true
 		Globalvars.iframes=true
-
+		attackready=false
+		
 	if Input.is_action_just_released("Utility"):
 		@warning_ignore("integer_division")
 		velocity.x=(dashspeed/2)*delta
 		airjumps=2
 		Globalvars.dashing=false
 		Globalvars.iframes=false
+		attackready=true
 		
 		
 	
 	move_and_slide()
+	
 func shoot():
 	if attackready==true:
 		attackready=false
