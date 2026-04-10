@@ -101,7 +101,6 @@ func shoot():
 			cycle+=1
 		if cycle==3:
 			cycle=0
-		print(str(cycle))
 		attackready=false
 		var b = Spear.instantiate()
 		add_child(b)
