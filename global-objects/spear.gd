@@ -11,8 +11,12 @@ func _physics_process(delta):
 	if cycle==2:
 		if direction==1:
 			rotation=0
+			position.x+=4000*delta
+			lifetime=0.2
 		if direction==-1:
 			rotation=3.1415926
+			position.x-=4000*delta
+			lifetime=0.2
 	#rotation += speed*delta*direction
 
 func _on_body_entered(body):
