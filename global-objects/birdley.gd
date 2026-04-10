@@ -14,6 +14,7 @@ var airjumps=2
 var direction=0
 var lastfacing=1
 var attackready=true
+var cycle=0
 
 
 
@@ -96,10 +97,16 @@ func _physics_process(delta):
 	
 func shoot():
 	if attackready==true:
+		if cycle<3:
+			cycle+=1
+		if cycle==3:
+			cycle=0
+		print(str(cycle))
 		attackready=false
 		var b = Spear.instantiate()
 		add_child(b)
 		b.direction= lastfacing
 		b.transform = $Marker2D.transform
+		b.cycle=cycle
 		await get_tree().create_timer(atkCooldown).timeout
 		attackready=true
