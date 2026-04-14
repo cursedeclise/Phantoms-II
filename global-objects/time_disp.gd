@@ -11,7 +11,12 @@ func _process(delta: float) -> void:
 		text = str(time_elapsed).pad_decimals(2) + " s"
 
 func reset() -> void:
-	# possibly save time_elapsed somewhere else before overriding it
+	if Globalvars.level==1:
+		Globalvars.stage1time=time_elapsed
+	if Globalvars.level==2:
+		Globalvars.stage2time=time_elapsed
+	if Globalvars.level==3:
+		Globalvars.stage3time=time_elapsed
 	time_elapsed = 0.0
 	is_stopped = false
 
