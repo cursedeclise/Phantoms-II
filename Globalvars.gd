@@ -7,6 +7,12 @@ var camSpeed=10
 var dashing=false
 var playerspeed=Vector2(0,0)
 var direction=0
+var level=1
+var stage1time= 0.0
+var stage2time= 0.0
+var stage3time= 0.0
+var stage3boss= 0.0
+var stage4time= 0.0
 
 func wait(seconds: float) -> void:
 	await get_tree().create_timer(seconds).timeout

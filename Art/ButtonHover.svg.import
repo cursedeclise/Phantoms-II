@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8nfuy37kdyuj"
-path="res://.godot/imported/titlescreen.svg-f5bf209139e68134d03d8540fcdcde0f.ctex"
+uid="uid://bcbqnnbnbn3o"
+path="res://.godot/imported/ButtonHover.svg-088b0dffd246d9a78f4dcdf83cca28dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/titlescreen.svg"
-dest_files=["res://.godot/imported/titlescreen.svg-f5bf209139e68134d03d8540fcdcde0f.ctex"]
+source_file="res://Art/ButtonHover.svg"
+dest_files=["res://.godot/imported/ButtonHover.svg-088b0dffd246d9a78f4dcdf83cca28dd.ctex"]
 
 [params]
 
