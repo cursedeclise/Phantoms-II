@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://xj0w4t7p02a0"]
+
+[ext_resource type="Texture2D" uid="uid://c8nfuy37kdyuj" path="res://Art/titlescreen.svg" id="1_u4kg6"]
+[ext_resource type="Texture2D" uid="uid://cyroxsa08ehi" path="res://Art/Button.svg" id="2_nfj55"]
+[ext_resource type="Texture2D" uid="uid://bcbqnnbnbn3o" path="res://Art/ButtonHover.svg" id="3_yiu5k"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 3850.6667
+offset_bottom = 2166.0
+texture = ExtResource("1_u4kg6")
+
+[node name="startbutton" type="TextureButton" parent="."]
+offset_left = 2655.0
+offset_top = 1097.0
+offset_right = 3015.0
+offset_bottom = 1282.0
+texture_normal = ExtResource("2_nfj55")
+texture_hover = ExtResource("3_yiu5k")
+
+[node name="tutorialbutton" type="TextureButton" parent="."]
+offset_left = 2536.0
+offset_top = 1352.0
+offset_right = 2896.0
+offset_bottom = 1537.0
+texture_normal = ExtResource("2_nfj55")
+texture_hover = ExtResource("3_yiu5k")
+
+[node name="exitbutton" type="TextureButton" parent="."]
+offset_left = 2432.0
+offset_top = 1608.0
+offset_right = 2792.0
+offset_bottom = 1793.0
+texture_normal = ExtResource("2_nfj55")
+texture_hover = ExtResource("3_yiu5k")
