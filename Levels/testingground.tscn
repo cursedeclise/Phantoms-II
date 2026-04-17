@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://crhp1tnh8pnqx"]
+[gd_scene load_steps=10 format=4 uid="uid://crhp1tnh8pnqx"]
 
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_vpocr"]
-[ext_resource type="Texture2D" uid="uid://cngxj6cpvyqey" path="res://Art/tilemapstart.svg" id="2_ookmi"]
+[ext_resource type="Texture2D" uid="uid://byf278nymsrhc" path="res://Art/tilemapstart.svg" id="2_ookmi"]
 [ext_resource type="PackedScene" uid="uid://yxl2s8akkjwo" path="res://global-objects/robot_enemy.tscn" id="3_luj72"]
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="4_0jwuf"]
-[ext_resource type="Texture2D" uid="uid://cqvyoqlri8cwu" path="res://Art/bramblebackground.svg" id="5_ssmhc"]
+[ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="5_ssmhc"]
+[ext_resource type="PackedScene" uid="uid://qlj4ag15mb2o" path="res://enemywall.tscn" id="6_7agld"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ookmi"]
 texture = ExtResource("2_ookmi")
@@ -162,5 +163,8 @@ texture = ExtResource("5_ssmhc")
 metadata/_edit_lock_ = true
 
 [node name="Robot-enemy2" parent="." instance=ExtResource("3_luj72")]
+
+[node name="enemywall" parent="." instance=ExtResource("6_7agld")]
+position = Vector2(1616, 1824)
 
 [connection signal="body_entered" from="coin" to="Birdley" method="_on_area_2d_body_entered"]

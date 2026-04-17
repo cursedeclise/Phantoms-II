@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://yxl2s8akkjwo"]
 
-[ext_resource type="Texture2D" uid="uid://cn27ptb1n31r3" path="res://Art/robot guy 2.svg" id="1_ccljg"]
+[ext_resource type="Texture2D" uid="uid://bmllbg2qwflbu" path="res://Art/robot guy 2.svg" id="1_ccljg"]
 [ext_resource type="Script" uid="uid://ckt5ofhkkvcqb" path="res://global-objects/robot_enemy.gd" id="1_e05mh"]
 [ext_resource type="Script" uid="uid://kxaf8ihoel6k" path="res://global-objects/area_2d.gd" id="3_p0qn5"]
 
@@ -89,6 +89,8 @@ radius = 95.0
 height = 274.0
 
 [node name="Robot-enemy" type="CharacterBody2D" groups=["takesDamage"]]
+collision_layer = 129
+collision_mask = 129
 script = ExtResource("1_e05mh")
 
 [node name="groundhitbox" type="CollisionShape2D" parent="."]
