@@ -6,6 +6,13 @@ var speed=2000
 var nowallstick=false
 var direction=1
 
+func flip():
+	if nowallstick==false:
+		direction*=-1
+		nowallstick=true
+
+
+
 func _physics_process(delta): 
 	
 	velocity.x=direction*speed*delta

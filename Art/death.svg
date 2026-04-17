@@ -23,15 +23,31 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.71891835"
-     inkscape:cx="520.92146"
-     inkscape:cy="430.50786"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
+     inkscape:zoom="1.4378367"
+     inkscape:cx="585.94971"
+     inkscape:cy="608.90086"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="0.99999998"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
   <defs
      id="defs1" />
   <g
@@ -45,6 +61,11 @@
        height="211.98512"
        x="-1.472119"
        y="-1.472119" />
+    <path
+       style="fill:#050510;fill-opacity:1;fill-rule:evenodd;stroke:#02023e;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:0.905882"
+       d="M 47.107805,195 34.999998,185 27.2342,180 24.999999,167.0855 22.633829,150 19.999999,140 v -12.84573 l -5,-17.15427 5,-14.999998 5,-20.000002 9.999999,-17.955392 10.000001,-17.044606 14.999999,-5.000001 h 25 l 35.000002,5 15,-10 36.86989,5 h 35.33085 l 22.79925,9.999998 15,3.027881 15,16.972121 V 80 L 262.03717,95.000002 254.99999,105 v 15 l 5,15 -5,15 -2.71561,10 -2.28439,15 -12.98884,10 -17.01116,15 h -22.55204 l -17.44796,-2.92008 -25,2.92008 -27.29367,5 H 111.88104 L 92.559477,202.04832 77.654273,200 H 62.565054 Z"
+       id="path6"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccc" />
     <text
        xml:space="preserve"
        style="font-size:35.8867px;font-family:Gabriola;-inkscape-font-specification:Gabriola;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#ff0000;stroke-width:0.560729"
@@ -58,29 +79,34 @@
          x="70.939873"
          y="39.364727">You have fallen</tspan></text>
     <ellipse
-       style="fill:#e3dbdb;stroke:#e3dbdb;stroke-width:0.264583"
+       style="fill:#e3dbdb;stroke:#e3dbdb;stroke-width:0.243393"
        id="path1"
-       cx="143.5316"
+       cx="140.98512"
        cy="164.50929"
-       rx="16.561338"
+       rx="14.014867"
        ry="15.45725" />
     <path
-       style="fill:#e3dbdb;stroke:#e3dbdb;stroke-width:0.115333"
-       d="m 150.29979,176.23706 9.46551,-9.19297 4.36366,4.35664 c 0,0 -0.21096,4.87337 -3.27129,3.1037 -3.06034,-1.76968 -4.60598,-4.12674 -4.60598,-4.12674 l 4.50031,5.71393 c 0,0 0.54618,3.73017 -1.71133,1.83606 -2.25751,-1.8941 -5.57564,-4.9061 -5.57564,-4.9061 l 5.92441,6.48697 c 0,0 -0.83185,5.67487 -3.8318,2.99823 -2.99995,-2.67663 -5.25785,-6.26972 -5.25785,-6.26972 z"
+       style="fill:#e3dbdb;stroke:#e3dbdb;stroke-width:0.106096"
+       d="m 146.71264,176.23706 8.01009,-9.19297 3.69271,4.35664 c 0,0 -0.17853,4.87337 -2.7683,3.1037 -2.58978,-1.76968 -3.89776,-4.12674 -3.89776,-4.12674 l 3.80834,5.71393 c 0,0 0.4622,3.73017 -1.4482,1.83606 -1.91039,-1.8941 -4.71833,-4.9061 -4.71833,-4.9061 l 5.01348,6.48697 c 0,0 -0.70395,5.67487 -3.24263,2.99823 -2.53867,-2.67663 -4.4494,-6.26972 -4.4494,-6.26972 z"
        id="path2" />
     <ellipse
-       style="fill:#000000;stroke:#000000;stroke-width:0.264583"
+       style="fill:#000000;stroke:#000000;stroke-width:0.243393"
        id="path4"
-       cx="140.03531"
+       cx="138.02643"
        cy="162.48512"
-       rx="4.6003718"
+       rx="3.8930185"
        ry="4.9684014" />
     <ellipse
-       style="fill:#000000;stroke:#000000;stroke-width:0.264583"
+       style="fill:#000000;stroke:#000000;stroke-width:0.243393"
        id="path5"
-       cx="149.23607"
+       cx="145.81248"
        cy="155.12453"
-       rx="4.2323418"
+       rx="3.5815768"
        ry="4.9684014" />
+    <path
+       style="fill:#45464e;fill-rule:evenodd;stroke:#690303;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:0.905882"
+       d="m 175,175 14.99999,-70 15,-5 z"
+       id="path3"
+       sodipodi:nodetypes="cccc" />
   </g>
 </svg>
