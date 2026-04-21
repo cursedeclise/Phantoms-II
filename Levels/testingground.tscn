@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://crhp1tnh8pnqx"]
+[gd_scene load_steps=11 format=4 uid="uid://crhp1tnh8pnqx"]
 
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_vpocr"]
 [ext_resource type="Texture2D" uid="uid://byf278nymsrhc" path="res://Art/tilemapstart.svg" id="2_ookmi"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="4_0jwuf"]
 [ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="5_ssmhc"]
 [ext_resource type="PackedScene" uid="uid://qlj4ag15mb2o" path="res://enemywall.tscn" id="6_7agld"]
+[ext_resource type="PackedScene" uid="uid://b1draqk26rjew" path="res://obelisk.tscn" id="7_1m157"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ookmi"]
 texture = ExtResource("2_ookmi")
@@ -166,5 +167,8 @@ metadata/_edit_lock_ = true
 
 [node name="enemywall" parent="." instance=ExtResource("6_7agld")]
 position = Vector2(1616, 1824)
+
+[node name="Area2D" parent="." instance=ExtResource("7_1m157")]
+position = Vector2(3424, 368)
 
 [connection signal="body_entered" from="coin" to="Birdley" method="_on_area_2d_body_entered"]

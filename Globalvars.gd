@@ -8,6 +8,7 @@ var dashing=false
 var playerspeed=Vector2(0,0)
 var direction=0
 var level=1
+var timed=false
 var stage1time= 0.0
 var stage2time= 0.0
 var stage3time= 0.0
