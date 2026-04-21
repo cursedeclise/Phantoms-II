@@ -1,8 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://xj0w4t7p02a0"]
+[gd_scene load_steps=9 format=3 uid="uid://xj0w4t7p02a0"]
 
 [ext_resource type="Texture2D" uid="uid://c8nfuy37kdyuj" path="res://Art/titlescreen.svg" id="1_u4kg6"]
 [ext_resource type="Texture2D" uid="uid://cyroxsa08ehi" path="res://Art/Button.svg" id="2_nfj55"]
 [ext_resource type="Texture2D" uid="uid://bcbqnnbnbn3o" path="res://Art/ButtonHover.svg" id="3_yiu5k"]
+[ext_resource type="Script" uid="uid://bqgim3oiyqyn1" path="res://Levels/startbutton.gd" id="4_yiu5k"]
+[ext_resource type="Script" uid="uid://bkkkmprtffr3g" path="res://Levels/exitbutton.gd" id="5_fj8iv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fj8iv"]
+font_size = 55
+
+[sub_resource type="LabelSettings" id="LabelSettings_ehtth"]
+font_size = 55
+
+[sub_resource type="LabelSettings" id="LabelSettings_yxog7"]
+font_size = 55
 
 [node name="Node2D" type="Node2D"]
 
@@ -18,6 +29,18 @@ offset_right = 3015.0
 offset_bottom = 1282.0
 texture_normal = ExtResource("2_nfj55")
 texture_hover = ExtResource("3_yiu5k")
+script = ExtResource("4_yiu5k")
+
+[node name="Label" type="Label" parent="startbutton"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 47.0
+offset_right = 263.0
+offset_bottom = 130.0
+text = "BEGIN"
+label_settings = SubResource("LabelSettings_fj8iv")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="tutorialbutton" type="TextureButton" parent="."]
 offset_left = 2536.0
@@ -27,6 +50,17 @@ offset_bottom = 1537.0
 texture_normal = ExtResource("2_nfj55")
 texture_hover = ExtResource("3_yiu5k")
 
+[node name="Label" type="Label" parent="tutorialbutton"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 321.0
+offset_bottom = 131.0
+text = "TUTORIAL"
+label_settings = SubResource("LabelSettings_ehtth")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="exitbutton" type="TextureButton" parent="."]
 offset_left = 2432.0
 offset_top = 1608.0
@@ -34,3 +68,18 @@ offset_right = 2792.0
 offset_bottom = 1793.0
 texture_normal = ExtResource("2_nfj55")
 texture_hover = ExtResource("3_yiu5k")
+script = ExtResource("5_fj8iv")
+
+[node name="Label" type="Label" parent="exitbutton"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 48.0
+offset_right = 233.0
+offset_bottom = 124.0
+text = "EXIT"
+label_settings = SubResource("LabelSettings_yxog7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="startbutton" to="startbutton" method="_on_button_down"]
+[connection signal="button_down" from="exitbutton" to="exitbutton" method="_on_button_down"]

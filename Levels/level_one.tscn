@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://b1x5j4jswej4k"]
+[gd_scene load_steps=7 format=4 uid="uid://b1x5j4jswej4k"]
 
 [ext_resource type="Texture2D" uid="uid://byf278nymsrhc" path="res://Art/tilemapstart.svg" id="1_2b52f"]
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="2_wi846"]
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="3_pvy0h"]
+[ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="4_om7uc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wi846"]
 texture = ExtResource("1_2b52f")
@@ -46,30 +47,12 @@ texture_region_size = Vector2i(180, 180)
 0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
-3:3/0 = 0
-3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-90, -90, 90, -90, 90, 90, -90, 90)
-4:3/0 = 0
-4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-90, -90, 90, -90, 90, 90, -90, 90)
-5:3/0 = 0
-5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-90, -90, 90, -90, 90, 90, -90, 90)
 0:4/0 = 0
 1:4/0 = 0
 2:4/0 = 0
-3:4/0 = 0
-3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-90, -90, 90, -90, 90, 90, -90, 90)
-4:4/0 = 0
-4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-90, -90, 90, -90, 90, 90, -90, 90)
-5:4/0 = 0
-5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-90, -90, 90, -90, 90, 90, -90, 90)
 0:5/0 = 0
 1:5/0 = 0
 2:5/0 = 0
-3:5/0 = 0
-3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-90, -90, 90, -90, 90, 90, -90, 90)
-4:5/0 = 0
-4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-90, -90, 90, -90, 90, 90, -90, 90)
-5:5/0 = 0
-5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-90, -90, 90, -90, 90, 90, -90, 90)
 6:0/0 = 0
 6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-90, -90, 90, -90, 90, 90, -90, 90)
 7:0/0 = 0
@@ -115,6 +98,15 @@ texture_region_size = Vector2i(180, 180)
 11:3/0 = 0
 11:4/0 = 0
 11:5/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+5:4/0 = 0
+4:4/0 = 0
+3:4/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_pvy0h"]
 tile_size = Vector2i(180, 180)
@@ -133,3 +125,11 @@ position = Vector2(131, -493)
 
 [node name="Coin" parent="." instance=ExtResource("3_pvy0h")]
 position = Vector2(8022, 1889)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Bramblebackground" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1920, 1080)
+texture = ExtResource("4_om7uc")
+metadata/_edit_lock_ = true
