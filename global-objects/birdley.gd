@@ -16,8 +16,9 @@ var lastfacing=1
 var attackready=true
 var cycle=0
 
-
-
+func _ready():
+	get_tree().paused=false
+	Globalvars.timed=true
 func _physics_process(delta): 
 	Globalvars.direction=0
 	
