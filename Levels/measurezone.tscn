@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=4 uid="uid://cquuupbh8jf88"]
 
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_38led"]
-[ext_resource type="Texture2D" uid="uid://cngxj6cpvyqey" path="res://Art/tilemapstart.svg" id="2_e80vv"]
+[ext_resource type="Texture2D" uid="uid://byf278nymsrhc" path="res://Art/tilemapstart.svg" id="2_e80vv"]
 [ext_resource type="PackedScene" uid="uid://yxl2s8akkjwo" path="res://global-objects/robot_enemy.tscn" id="3_2i1rf"]
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="4_18m47"]
-[ext_resource type="Texture2D" uid="uid://dl6pqirq3au2n" path="res://Art/background.svg" id="5_ab70q"]
+[ext_resource type="Texture2D" uid="uid://baccssihwhwuo" path="res://Art/background.svg" id="5_ab70q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ookmi"]
 texture = ExtResource("2_e80vv")
