@@ -22,12 +22,16 @@ func _ready():
 func _physics_process(delta): 
 	Globalvars.direction=0
 	
-	
-	if is_on_floor() : #no gravity on floor
+	if Globalvars.launch==true:
+		airjumps=2
+		
+		Globalvars.launch=false
+	elif is_on_floor() : #no gravity on floor
 		velocity.y=0
 		airjumps=2
 	elif Globalvars.dashing==false: #gravity if no floor
 		velocity.y+=GRAVITY*delta
+	
 	else:
 		velocity.y=0
 	
@@ -61,6 +65,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		animated_sprite.play("wait")
 		velocity.y=JUMPVELOCITY
+		
+	elif Input.is_action_just_pressed("jump") and Globalvars.launch==true:
+		animated_sprite.play("wait")
+		velocity.y=JUMPVELOCITY*5
 		
 	elif Input.is_action_just_pressed("jump") and airjumps>0:
 		animated_sprite.play("wait")
