@@ -3,21 +3,22 @@ extends CharacterBody2D
 @export var Spear : PackedScene
 
 
-const JUMPVELOCITY=-1200
+const JUMPVELOCITY=-1600
 const GRAVITY=2000
-const TOPSPEED=2000
+const TOPSPEED=3000
 const ACC=3500
 var atkCooldown=0.33
 var speed=0
-var dashspeed=6000
+var dashspeed=8000
 var airjumps=2
 var direction=0
 var lastfacing=1
 var attackready=true
 var cycle=0
 
-
-
+func _ready():
+	get_tree().paused=false
+	Globalvars.timed=true
 func _physics_process(delta): 
 	Globalvars.direction=0
 	
@@ -85,7 +86,7 @@ func _physics_process(delta):
 		
 	if Input.is_action_just_released("Utility"):
 		@warning_ignore("integer_division")
-		velocity.x=(dashspeed/2)*delta
+		velocity.x=2500*delta
 		airjumps=2
 		Globalvars.dashing=false
 		Globalvars.iframes=false
