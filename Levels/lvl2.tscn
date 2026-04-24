@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="2_kiu7i"]
 [ext_resource type="Texture2D" uid="uid://dvnx358d78umq" path="res://Art/Water.svg" id="3_kiu7i"]
 [ext_resource type="Script" uid="uid://b4w1y3fkxbaql" path="res://Levels/water.gd" id="3_y10q8"]
-[ext_resource type="PackedScene" uid="uid://dn7aoog2hny1b" path="res://Levels/watercurrent.tscn" id="5_rytll"]
+[ext_resource type="PackedScene" uid="uid://ce85creqdl8vr" path="res://global-objects/watercurrent_up.tscn" id="5_rytll"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y10q8"]
 texture = ExtResource("1_m3g7l")
@@ -210,5 +210,5 @@ patch_margin_top = 640
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="Area2D" parent="." instance=ExtResource("5_rytll")]
-position = Vector2(1175, 430)
+[node name="Watercurrent-up" parent="." instance=ExtResource("5_rytll")]
+position = Vector2(22237, 11408)
