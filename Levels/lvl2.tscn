@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://rlifoib0yrly" path="res://Art/tilemapwater.svg" id="1_m3g7l"]
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="2_kiu7i"]
+[ext_resource type="Texture2D" uid="uid://dgi0gq84w8780" path="res://Art/waterbackground.svg" id="2_nxj2t"]
 [ext_resource type="Texture2D" uid="uid://dvnx358d78umq" path="res://Art/Water.svg" id="3_kiu7i"]
 [ext_resource type="Script" uid="uid://b4w1y3fkxbaql" path="res://Levels/water.gd" id="3_y10q8"]
 [ext_resource type="PackedScene" uid="uid://ce85creqdl8vr" path="res://global-objects/watercurrent_up.tscn" id="5_rytll"]
-[ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="6_nxj2t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y10q8"]
 texture = ExtResource("1_m3g7l")
@@ -190,7 +190,7 @@ layer = -1
 
 [node name="Bramblebackground" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(1920, 1080)
-texture = ExtResource("6_nxj2t")
+texture = ExtResource("2_nxj2t")
 metadata/_edit_lock_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
