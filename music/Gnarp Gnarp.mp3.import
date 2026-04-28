@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0symlfdu04r"
+path="res://.godot/imported/Gnarp Gnarp.mp3-e541fe6e75f9787fba953ad80375e3f5.mp3str"
+
+[deps]
+
+source_file="res://music/Gnarp Gnarp.mp3"
+dest_files=["res://.godot/imported/Gnarp Gnarp.mp3-e541fe6e75f9787fba953ad80375e3f5.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

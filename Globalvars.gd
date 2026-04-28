@@ -1,8 +1,11 @@
 extends Node
 
 var score=0
+var gravity=3500
+var airjumps=2
 var playerhealth=120
 var iframes=true
+var inwater=false
 var camSpeed=10
 var dashing=false
 var playerspeed=Vector2(0,0)

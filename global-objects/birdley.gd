@@ -3,14 +3,13 @@ extends CharacterBody2D
 @export var Spear : PackedScene
 
 
-const JUMPVELOCITY=-1600
-const GRAVITY=2000
+const JUMPVELOCITY=-2000
+
 const TOPSPEED=3000
 const ACC=3500
 var atkCooldown=0.33
 var speed=0
 var dashspeed=8000
-var airjumps=2
 var direction=0
 var lastfacing=1
 var attackready=true
@@ -23,14 +22,17 @@ func _physics_process(delta):
 	Globalvars.direction=0
 	
 	if Globalvars.launch==true:
-		airjumps=2
+		Globalvars.airjumps=2
 		
 		Globalvars.launch=false
-	elif is_on_floor() : #no gravity on floor
+	elif is_on_floor(): #no gravity on floor
 		velocity.y=0
-		airjumps=2
+		if Globalvars.inwater==true:
+			Globalvars.airjumps=8
+		else:
+			Globalvars.airjumps=2
 	elif Globalvars.dashing==false: #gravity if no floor
-		velocity.y+=GRAVITY*delta
+		velocity.y+=Globalvars.gravity*delta
 	
 	else:
 		velocity.y=0
@@ -70,10 +72,10 @@ func _physics_process(delta):
 		animated_sprite.play("wait")
 		velocity.y=JUMPVELOCITY*5
 		
-	elif Input.is_action_just_pressed("jump") and airjumps>0:
+	elif Input.is_action_just_pressed("jump") and Globalvars.airjumps>0:
 		animated_sprite.play("wait")
 		velocity.y=JUMPVELOCITY
-		airjumps-=1
+		Globalvars.airjumps-=1
 	elif Input.is_action_just_pressed("jump") and is_on_wall():
 		animated_sprite.play("wait")
 		velocity.y=JUMPVELOCITY
@@ -95,7 +97,7 @@ func _physics_process(delta):
 	if Input.is_action_just_released("Utility"):
 		@warning_ignore("integer_division")
 		velocity.x=2500*delta
-		airjumps=2
+		Globalvars.airjumps=2
 		Globalvars.dashing=false
 		Globalvars.iframes=false
 		attackready=true
