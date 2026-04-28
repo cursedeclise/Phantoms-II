@@ -11,15 +11,15 @@ func _process(delta):
 	position.x = cos(time) * radius_x
 	position.y = sin(time) * radius_y
 
+func _on_body_entered(body: Node2D) -> void:
+	if body.name==("Birdley"):
+		Globalvars.gravity=2000
+		Globalvars.airjumps=8
+		Globalvars.inwater=true
 
 
-#func _process(delta: float) -> void:
-	#position.x+=60*delta
-	#if !up:
-		#position.y+=50*delta
-		#await get_tree().create_timer(2).timeout
-		#up=true
-	#else:
-		#position.y-=50*delta
-		#await get_tree().create_timer(2).timeout
-		#up=false
+func _on_body_exited(body: Node2D) -> void:
+	if body.name==("Birdley"):
+		Globalvars.gravity=3500
+		Globalvars.airjumps=2
+		Globalvars.inwater=false

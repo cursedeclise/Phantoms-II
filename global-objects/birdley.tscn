@@ -99,6 +99,7 @@ size = Vector2(704, 20)
 
 [node name="Birdley" type="CharacterBody2D"]
 z_index = 1
+collision_mask = 3
 script = ExtResource("1_l8bwd")
 Spear = ExtResource("6_txgmc")
 

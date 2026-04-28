@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://xj0w4t7p02a0"]
+[gd_scene load_steps=10 format=3 uid="uid://xj0w4t7p02a0"]
 
 [ext_resource type="Texture2D" uid="uid://c8nfuy37kdyuj" path="res://Art/titlescreen.svg" id="1_u4kg6"]
 [ext_resource type="Texture2D" uid="uid://cyroxsa08ehi" path="res://Art/Button.svg" id="2_nfj55"]
 [ext_resource type="Texture2D" uid="uid://bcbqnnbnbn3o" path="res://Art/ButtonHover.svg" id="3_yiu5k"]
 [ext_resource type="Script" uid="uid://bqgim3oiyqyn1" path="res://Levels/startbutton.gd" id="4_yiu5k"]
 [ext_resource type="Script" uid="uid://bkkkmprtffr3g" path="res://Levels/exitbutton.gd" id="5_fj8iv"]
+[ext_resource type="AudioStream" uid="uid://c8pe8hxia5r8m" path="res://music/Phantoms (title screen).mp3" id="6_ehtth"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fj8iv"]
 font_size = 55
@@ -80,6 +81,11 @@ text = "EXIT"
 label_settings = SubResource("LabelSettings_yxog7")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ehtth")
+volume_db = 5.5
+autoplay = true
 
 [connection signal="button_down" from="startbutton" to="startbutton" method="_on_button_down"]
 [connection signal="button_down" from="exitbutton" to="exitbutton" method="_on_button_down"]
