@@ -31,8 +31,16 @@ func _physics_process(delta):
 			Globalvars.airjumps=8
 		else:
 			Globalvars.airjumps=2
-	elif Globalvars.dashing==false: #gravity if no floor
+			
+	elif Input.is_action_pressed("down"): #more gravity if holding down
+		velocity.y+=Globalvars.gravity*delta*3
+		if not is_on_floor():
+			animated_sprite.play("dive")
+		
+	elif Globalvars.dashing==false: #gravity if not dashing
 		velocity.y+=Globalvars.gravity*delta
+		
+	
 	
 	else:
 		velocity.y=0
@@ -120,3 +128,7 @@ func shoot():
 		b.cycle=cycle
 		await get_tree().create_timer(atkCooldown).timeout
 		attackready=true
+
+
+func _on_darkinator_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

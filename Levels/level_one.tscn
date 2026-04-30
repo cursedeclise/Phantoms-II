@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://b1x5j4jswej4k"]
+[gd_scene load_steps=11 format=4 uid="uid://b1x5j4jswej4k"]
 
 [ext_resource type="Texture2D" uid="uid://byf278nymsrhc" path="res://Art/tilemapstart.svg" id="1_2b52f"]
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="2_wi846"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="4_om7uc"]
 [ext_resource type="AudioStream" uid="uid://cdtgcjbvscgn5" path="res://music/Lost Cities.mp3" id="5_cph7v"]
 [ext_resource type="Script" uid="uid://b5jsg3a66e0wy" path="res://Levels/canvas_modulate.gd" id="5_ya8ts"]
+[ext_resource type="Script" uid="uid://byv2ucj2k5xl2" path="res://Levels/darkinator.gd" id="7_ya8ts"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wi846"]
 texture = ExtResource("1_2b52f")
@@ -115,6 +116,9 @@ tile_size = Vector2i(180, 180)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wi846")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whtlt"]
+size = Vector2(96558, 38848)
+
 [node name="Level one" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -148,3 +152,16 @@ autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 script = ExtResource("5_ya8ts")
+
+[node name="darkinator" type="Area2D" parent="."]
+position = Vector2(-120, 1080)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("7_ya8ts")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="darkinator"]
+position = Vector2(-8319, 19336)
+shape = SubResource("RectangleShape2D_whtlt")
+
+[connection signal="body_entered" from="darkinator" to="darkinator" method="_on_body_entered"]
+[connection signal="body_exited" from="darkinator" to="darkinator" method="_on_body_exited"]
