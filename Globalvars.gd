@@ -11,6 +11,7 @@ var dashing=false
 var playerspeed=Vector2(0,0)
 var direction=0
 var level=1
+var darkness=0
 var timed=false
 var launch=false
 var stage1time= 0.0

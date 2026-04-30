@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://b1x5j4jswej4k"]
+[gd_scene load_steps=9 format=4 uid="uid://b1x5j4jswej4k"]
 
 [ext_resource type="Texture2D" uid="uid://byf278nymsrhc" path="res://Art/tilemapstart.svg" id="1_2b52f"]
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="2_wi846"]
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="3_pvy0h"]
 [ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="4_om7uc"]
 [ext_resource type="AudioStream" uid="uid://cdtgcjbvscgn5" path="res://music/Lost Cities.mp3" id="5_cph7v"]
+[ext_resource type="Script" uid="uid://b5jsg3a66e0wy" path="res://Levels/canvas_modulate.gd" id="5_ya8ts"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wi846"]
 texture = ExtResource("1_2b52f")
@@ -130,7 +131,12 @@ position = Vector2(8022, 1889)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
+z_index = 3
+script = ExtResource("5_ya8ts")
+
 [node name="Bramblebackground" type="Sprite2D" parent="CanvasLayer"]
+z_index = 1
 position = Vector2(1920, 1080)
 texture = ExtResource("4_om7uc")
 metadata/_edit_lock_ = true
@@ -139,3 +145,6 @@ metadata/_edit_lock_ = true
 stream = ExtResource("5_cph7v")
 volume_db = 1.0
 autoplay = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("5_ya8ts")

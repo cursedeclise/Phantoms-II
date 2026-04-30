@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dj35ut3k6jn6s"]
+[gd_scene load_steps=26 format=3 uid="uid://dj35ut3k6jn6s"]
 
 [ext_resource type="Script" uid="uid://dh1ijxtj5genf" path="res://global-objects/birdley.gd" id="1_l8bwd"]
 [ext_resource type="Texture2D" uid="uid://cjfqg1crrcnfy" path="res://Art/birdlry-test.svg" id="2_l8bwd"]
@@ -97,6 +97,19 @@ height = 208.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_54dsf"]
 size = Vector2(704, 20)
 
+[sub_resource type="Gradient" id="Gradient_086s2"]
+offsets = PackedFloat32Array(0, 0.46, 1)
+colors = PackedColorArray(0.68228626, 0.371556, 4.813075e-07, 1, 1, 0.57254905, 0.12941177, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_68b6p"]
+gradient = SubResource("Gradient_086s2")
+width = 1080
+height = 1080
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.90000004, 0.90000004)
+metadata/_snap_enabled = true
+
 [node name="Birdley" type="CharacterBody2D"]
 z_index = 1
 collision_mask = 3
@@ -153,6 +166,11 @@ script = ExtResource("9_54dsf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dashcolliderdamage"]
 shape = SubResource("RectangleShape2D_54dsf")
 script = ExtResource("10_q6pyh")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+range_z_min = -2000
+range_z_max = 2000
+texture = SubResource("GradientTexture2D_68b6p")
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
 [connection signal="body_entered" from="dashcolliderdamage" to="dashcolliderdamage" method="_on_body_entered"]
