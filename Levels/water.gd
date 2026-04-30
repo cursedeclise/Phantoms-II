@@ -16,6 +16,7 @@ func _on_body_entered(body: Node2D) -> void:
 		Globalvars.gravity=2000
 		Globalvars.airjumps=8
 		Globalvars.inwater=true
+		Globalvars.darkness=32
 
 
 func _on_body_exited(body: Node2D) -> void:
@@ -23,3 +24,4 @@ func _on_body_exited(body: Node2D) -> void:
 		Globalvars.gravity=3500
 		Globalvars.airjumps=2
 		Globalvars.inwater=false
+		Globalvars.darkness=128

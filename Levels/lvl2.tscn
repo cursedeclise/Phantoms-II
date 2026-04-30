@@ -251,6 +251,48 @@ range_z_min = -4096
 range_z_max = 4096
 texture = SubResource("GradientTexture2D_o0e6j")
 
+[node name="Bluelight2" type="PointLight2D" parent="TileMapLayer/Bluelight"]
+position = Vector2(7431.4736, 7081.1606)
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_o0e6j")
+
+[node name="Bluelight3" type="PointLight2D" parent="TileMapLayer/Bluelight"]
+position = Vector2(5246.623, 8119.86)
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_o0e6j")
+
+[node name="Bluelight4" type="PointLight2D" parent="TileMapLayer/Bluelight"]
+position = Vector2(15850.189, 2532.264)
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_o0e6j")
+
+[node name="Bluelight5" type="PointLight2D" parent="TileMapLayer/Bluelight"]
+position = Vector2(-1072.5923, 11522.554)
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_o0e6j")
+
+[node name="Bluelight6" type="PointLight2D" parent="TileMapLayer/Bluelight"]
+position = Vector2(3060, 14640)
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_o0e6j")
+
+[node name="Bluelight7" type="PointLight2D" parent="TileMapLayer/Bluelight"]
+position = Vector2(8335.068, 16252.109)
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_o0e6j")
+
+[node name="Bluelight8" type="PointLight2D" parent="TileMapLayer/Bluelight"]
+position = Vector2(20350.328, -516.1875)
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_o0e6j")
+
 [node name="Pinklight" type="PointLight2D" parent="TileMapLayer"]
 position = Vector2(2940, -4200)
 range_z_min = -4096
@@ -259,6 +301,30 @@ texture = SubResource("GradientTexture2D_gf6r3")
 
 [node name="Pinklight" type="PointLight2D" parent="TileMapLayer/Pinklight"]
 position = Vector2(10140, 540)
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_gf6r3")
+
+[node name="Pinklight2" type="PointLight2D" parent="TileMapLayer/Pinklight"]
+position = Vector2(12240, 9480)
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_gf6r3")
+
+[node name="Pinklight3" type="PointLight2D" parent="TileMapLayer/Pinklight"]
+position = Vector2(23880, 4620)
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_gf6r3")
+
+[node name="Pinklight4" type="PointLight2D" parent="TileMapLayer/Pinklight"]
+position = Vector2(13514.828, 14396.4375)
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_gf6r3")
+
+[node name="Pinklight5" type="PointLight2D" parent="TileMapLayer/Pinklight"]
+position = Vector2(3960, 14580)
 range_z_min = -4096
 range_z_max = 4096
 texture = SubResource("GradientTexture2D_gf6r3")
