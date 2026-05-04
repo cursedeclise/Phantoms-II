@@ -160,7 +160,7 @@ collision_mask = 3
 script = ExtResource("7_ya8ts")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="darkinator"]
-position = Vector2(-8319, 19336)
+position = Vector2(-8220, 28260)
 shape = SubResource("RectangleShape2D_whtlt")
 
 [connection signal="body_entered" from="darkinator" to="darkinator" method="_on_body_entered"]
