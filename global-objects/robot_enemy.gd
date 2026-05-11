@@ -2,7 +2,7 @@ extends CharacterBody2D
 @onready var animated_sprite=$AnimatedSprite2D
 const JUMPVELOCITY=-1200
 const GRAVITY=2000
-var speed=2000
+var speed=20000
 var nowallstick=false
 var direction=1
 

@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=4 uid="uid://jrjth6r62exr"]
+[gd_scene load_steps=13 format=4 uid="uid://jrjth6r62exr"]
 
 [ext_resource type="AudioStream" uid="uid://d2uurpxfqsqjn" path="res://music/Twisted-fortress.mp3" id="1_clnao"]
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_kwqyq"]
 [ext_resource type="Texture2D" uid="uid://tkswxa2dtky5" path="res://Art/tilemap-citadel.svg" id="2_clnao"]
+[ext_resource type="Script" uid="uid://b5jsg3a66e0wy" path="res://Levels/canvas_modulate.gd" id="2_y8n2b"]
 [ext_resource type="PackedScene" uid="uid://yxl2s8akkjwo" path="res://global-objects/robot_enemy.tscn" id="3_y8n2b"]
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="4_nk88g"]
 [ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="5_uo42o"]
 [ext_resource type="PackedScene" uid="uid://qlj4ag15mb2o" path="res://enemywall.tscn" id="6_xgbg2"]
+[ext_resource type="Script" uid="uid://byv2ucj2k5xl2" path="res://Levels/darkinator.gd" id="9_y8n2b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlhms"]
 texture = ExtResource("2_clnao")
@@ -166,12 +168,19 @@ tile_size = Vector2i(180, 180)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_jlhms")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nk88g"]
+size = Vector2(3960, 4222)
+
 [node name="Testingground" type="Node2D"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_clnao")
 volume_db = 1.0
 autoplay = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+z_index = 3
+script = ExtResource("2_y8n2b")
 
 [node name="Birdley" parent="." instance=ExtResource("1_kwqyq")]
 position = Vector2(581, 292)
@@ -198,9 +207,25 @@ position = Vector2(1920, 1080)
 texture = ExtResource("5_uo42o")
 metadata/_edit_lock_ = true
 
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer/Bramblebackground"]
+z_index = 3
+script = ExtResource("2_y8n2b")
+
 [node name="Robot-enemy2" parent="." instance=ExtResource("3_y8n2b")]
 
 [node name="enemywall" parent="." instance=ExtResource("6_xgbg2")]
 position = Vector2(1616, 1824)
 
+[node name="darkinator" type="Area2D" parent="."]
+position = Vector2(-120, 1080)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("9_y8n2b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="darkinator"]
+position = Vector2(-3300, 1080)
+shape = SubResource("RectangleShape2D_nk88g")
+
 [connection signal="body_entered" from="coin" to="Birdley" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="darkinator" to="darkinator" method="_on_body_entered"]
+[connection signal="body_exited" from="darkinator" to="darkinator" method="_on_body_exited"]

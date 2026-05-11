@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://xxqxs2mse4in"]
+[gd_scene load_steps=11 format=3 uid="uid://xxqxs2mse4in"]
 
 [ext_resource type="Texture2D" uid="uid://bwg2k1bvx5lor" path="res://Art/death.svg" id="1_ebp10"]
+[ext_resource type="AudioStream" uid="uid://cl1o2mpf005dp" path="res://music/oroboros.ogg.mp3" id="1_ibfvw"]
 [ext_resource type="Texture2D" uid="uid://cyroxsa08ehi" path="res://Art/Button.svg" id="2_h0wh6"]
 [ext_resource type="Texture2D" uid="uid://bcbqnnbnbn3o" path="res://Art/ButtonHover.svg" id="3_xnjq7"]
 [ext_resource type="Script" uid="uid://dn7wsf64lc1lc" path="res://Levels/startbutton2.gd" id="4_xnjq7"]
@@ -22,6 +23,11 @@ outline_size = 15
 outline_color = Color(0.61894506, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_ibfvw")
+volume_db = 1.0
+autoplay = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 3850.6667
