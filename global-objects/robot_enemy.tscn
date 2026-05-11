@@ -88,7 +88,7 @@ animations = [{
 radius = 95.0
 height = 274.0
 
-[node name="Robot-enemy" type="CharacterBody2D" groups=["takesDamage"]]
+[node name="drifterH" type="CharacterBody2D" groups=["takesDamage"]]
 collision_layer = 129
 collision_mask = 129
 script = ExtResource("1_e05mh")
