@@ -18,7 +18,7 @@ func _physics_process(delta):
 	velocity.y=direction*speed*delta
 
 	
-	animated_sprite.play("walk")
+	animated_sprite.play("drift")
 	
 	if is_on_floor() and nowallstick==false:
 		direction*=-1

@@ -16,8 +16,9 @@ func _process(_delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("dealsDamage") and Globalvars.iframes==false:
-		if area.name==("robot"):
+		if area.is_in_group("dealsdamage2"):
 			Globalvars.playerhealth-=5
+			Globalvars.score-=1
 		Globalvars.playerhealth-=5
 		Globalvars.score-=1
 		Globalvars.iframes=true
@@ -26,7 +27,7 @@ func _on_area_entered(area: Area2D) -> void:
 		await get_tree().create_timer(1).timeout
 		Globalvars.iframes=false
 		print("iframes off")
-		
+
 	if Globalvars.playerhealth==0:
 		get_tree().change_scene_to_file("res://Levels/Death.tscn")
 		pass

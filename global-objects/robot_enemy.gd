@@ -11,14 +11,12 @@ func flip():
 		direction*=-1
 		nowallstick=true
 
-
-
 func _physics_process(delta): 
 	
 	velocity.x=direction*speed*delta
 
 	
-	animated_sprite.play("walk")
+	animated_sprite.play("drift")
 	
 	if is_on_floor(): #no gravity on floor
 		velocity.y=0

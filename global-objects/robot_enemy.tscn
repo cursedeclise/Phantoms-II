@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://yxl2s8akkjwo"]
+[gd_scene load_steps=21 format=3 uid="uid://yxl2s8akkjwo"]
 
 [ext_resource type="Texture2D" uid="uid://bmllbg2qwflbu" path="res://Art/robot guy 2.svg" id="1_ccljg"]
 [ext_resource type="Script" uid="uid://ckt5ofhkkvcqb" path="res://global-objects/robot_enemy.gd" id="1_e05mh"]
+[ext_resource type="Texture2D" uid="uid://cx1e4l4dvmjge" path="res://Art/real_drifter(not clickbait).svg" id="3_fsgg3"]
 [ext_resource type="Script" uid="uid://kxaf8ihoel6k" path="res://global-objects/area_2d.gd" id="3_p0qn5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e05mh"]
@@ -27,6 +28,22 @@ region = Rect2(198, 280, 198, 280)
 [sub_resource type="AtlasTexture" id="AtlasTexture_yat6g"]
 atlas = ExtResource("1_ccljg")
 region = Rect2(0, 280, 198, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vclh"]
+atlas = ExtResource("3_fsgg3")
+region = Rect2(0, 180, 270, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyv7w"]
+atlas = ExtResource("3_fsgg3")
+region = Rect2(270, 180, 270, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6bp7"]
+atlas = ExtResource("3_fsgg3")
+region = Rect2(540, 180, 270, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0skbq"]
+atlas = ExtResource("3_fsgg3")
+region = Rect2(810, 180, 270, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_34b4d"]
 atlas = ExtResource("1_ccljg")
@@ -68,6 +85,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_7vclh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyv7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6bp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0skbq")
+}],
+"loop": false,
+"name": &"drift",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_34b4d")
 }, {
 "duration": 1.0,
@@ -99,9 +133,7 @@ shape = SubResource("CapsuleShape2D_e05mh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7vclh")
-animation = &"walk"
-frame = 3
-frame_progress = 1.0
+animation = &"drift"
 
 [node name="robot" type="Area2D" parent="." groups=["dealsDamage"]]
 collision_layer = 2
