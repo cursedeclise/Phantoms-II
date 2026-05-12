@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=4 uid="uid://ckf1u6gcl4vfu"]
+[gd_scene load_steps=4 format=4 uid="uid://ckf1u6gcl4vfu"]
 
 [ext_resource type="Texture2D" uid="uid://tkswxa2dtky5" path="res://Art/tilemap-citadel.svg" id="1_oc2yo"]
-[ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="2_c5ewu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fe2u0"]
 texture = ExtResource("1_oc2yo")
@@ -10104,6 +10103,3 @@ sources/0 = SubResource("TileSetAtlasSource_fe2u0")
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAALABAAAAAAAAAAAAALABEAAAAAAAEAAAALABIAAAAAAAIAAAAMABAAAAABAAAAAAAMABEAAAABAAEAAAAMABIAAAABAAIAAAANABAAAAACAAAAAAANABEAAAACAAEAAAANABIAAAACAAIAAAA=")
 tile_set = SubResource("TileSet_j8rwt")
-
-[node name="Birdley" parent="." instance=ExtResource("2_c5ewu")]
-position = Vector2(481, 41)
