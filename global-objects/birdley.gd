@@ -33,7 +33,7 @@ func _physics_process(delta):
 			Globalvars.airjumps=2
 			
 	elif Input.is_action_pressed("down"): #more gravity if holding down
-		velocity.y+=Globalvars.gravity*delta*3
+		velocity.y+=Globalvars.gravity*delta*4
 		if not is_on_floor():
 			animated_sprite.play("dive")
 		

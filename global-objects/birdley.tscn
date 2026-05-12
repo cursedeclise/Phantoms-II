@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dj35ut3k6jn6s"]
+[gd_scene load_steps=28 format=3 uid="uid://dj35ut3k6jn6s"]
 
 [ext_resource type="Script" uid="uid://dh1ijxtj5genf" path="res://global-objects/birdley.gd" id="1_l8bwd"]
 [ext_resource type="Texture2D" uid="uid://cjfqg1crrcnfy" path="res://Art/birdlry-test.svg" id="2_l8bwd"]
@@ -26,7 +26,11 @@ region = Rect2(720, 360, 720, 360)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xo8jk"]
 atlas = ExtResource("3_txgmc")
-region = Rect2(0, 840, 450, 420)
+region = Rect2(0, 840, 360, 420)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1es4o"]
+atlas = ExtResource("3_txgmc")
+region = Rect2(360, 840, 360, 420)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_34r8e"]
 atlas = ExtResource("3_txgmc")
@@ -68,10 +72,13 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xo8jk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1es4o")
 }],
-"loop": true,
+"loop": false,
 "name": &"dive",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,

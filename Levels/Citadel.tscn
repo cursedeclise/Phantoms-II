@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="4_nk88g"]
 [ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="5_uo42o"]
 [ext_resource type="PackedScene" uid="uid://qlj4ag15mb2o" path="res://enemywall.tscn" id="6_xgbg2"]
-[ext_resource type="Script" path="res://Levels/darkinator.gd" id="9_y8n2b"]
+[ext_resource type="Script" uid="uid://byv2ucj2k5xl2" path="res://Levels/darkinator.gd" id="9_y8n2b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlhms"]
 texture = ExtResource("2_clnao")
