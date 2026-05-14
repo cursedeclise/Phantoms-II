@@ -123,6 +123,8 @@ radius = 70.0
 height = 274.0
 
 [node name="DrifterV" type="CharacterBody2D" groups=["takesDamage"]]
+collision_layer = 131
+collision_mask = 131
 script = ExtResource("1_ngghn")
 
 [node name="groundhitbox" type="CollisionShape2D" parent="."]

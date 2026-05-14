@@ -6,6 +6,12 @@ func _on_body_entered(body: Node2D) -> void:
 		get_tree().paused=true
 		Globalvars.timed=false
 		Globalvars.level+=1
-		await get_tree().create_timer(3).timeout
+		$AudioStreamPlayer.play()
+		await get_tree().create_timer(1.75).timeout
 		get_tree().paused=false
-		get_tree().change_scene_to_file("res://Levels/Death.tscn")
+		if get_tree().current_scene.name == "Level one":
+			get_tree().change_scene_to_file("res://Levels/lvl2.tscn")
+		elif get_tree().current_scene.name == "Node2D":
+			get_tree().change_scene_to_file("res://Levels/Citadel.tscn")
+		elif get_tree().current_scene.name == "Testingground":
+			get_tree().change_scene_to_file("res://Levels/Death.tscn")

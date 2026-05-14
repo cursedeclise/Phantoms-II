@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dj35ut3k6jn6s"]
+[gd_scene load_steps=29 format=3 uid="uid://dj35ut3k6jn6s"]
 
 [ext_resource type="Script" uid="uid://dh1ijxtj5genf" path="res://global-objects/birdley.gd" id="1_l8bwd"]
 [ext_resource type="Texture2D" uid="uid://cjfqg1crrcnfy" path="res://Art/birdlry-test.svg" id="2_l8bwd"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://boaho6ihx42o3" path="res://global-objects/dashcollider.gd" id="8_wi426"]
 [ext_resource type="Script" uid="uid://com2xrgdpxm5i" path="res://global-objects/dashcolliderdamage.gd" id="9_54dsf"]
 [ext_resource type="Script" uid="uid://c7wih2h3c87ev" path="res://global-objects/dashcollidercollider.gd" id="10_q6pyh"]
+[ext_resource type="AudioStream" uid="uid://bmn0orurb1h8t" path="res://music/dragon-studio-bone-breaking-effect-393836.mp3" id="12_68b6p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jgvrk"]
 radius = 67.0
@@ -147,7 +148,7 @@ animation = &"dive"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(5, 0)
-zoom = Vector2(0.7, 0.7)
+zoom = Vector2(0.6, 0.6)
 position_smoothing_speed = 10.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
@@ -185,6 +186,9 @@ script = ExtResource("9_54dsf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dashcolliderdamage"]
 shape = SubResource("RectangleShape2D_54dsf")
 script = ExtResource("10_q6pyh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="dashcolliderdamage"]
+stream = ExtResource("12_68b6p")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 range_z_min = -4096

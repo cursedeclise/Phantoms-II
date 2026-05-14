@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://debgkqa2yq4q0"]
+[gd_scene load_steps=17 format=4 uid="uid://debgkqa2yq4q0"]
 
 [ext_resource type="AudioStream" uid="uid://b0symlfdu04r" path="res://music/Gnarp Gnarp.mp3" id="1_5u780"]
 [ext_resource type="Script" uid="uid://b5jsg3a66e0wy" path="res://Levels/canvas_modulate.gd" id="1_jkkvr"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dvnx358d78umq" path="res://Art/Water.svg" id="3_kiu7i"]
 [ext_resource type="Script" uid="uid://b4w1y3fkxbaql" path="res://Levels/water.gd" id="3_y10q8"]
 [ext_resource type="PackedScene" uid="uid://ce85creqdl8vr" path="res://global-objects/watercurrent_up.tscn" id="5_rytll"]
+[ext_resource type="PackedScene" uid="uid://b1draqk26rjew" path="res://obelisk.tscn" id="9_gf6r3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y10q8"]
 texture = ExtResource("1_m3g7l")
@@ -362,6 +363,9 @@ position = Vector2(21161, 6243)
 
 [node name="Watercurrent-up4" parent="." instance=ExtResource("5_rytll")]
 position = Vector2(23137, 3512)
+
+[node name="Area2D" parent="." instance=ExtResource("9_gf6r3")]
+position = Vector2(30720, -2160)
 
 [connection signal="body_entered" from="Water" to="Water" method="_on_body_entered"]
 [connection signal="body_exited" from="Water" to="Water" method="_on_body_exited"]

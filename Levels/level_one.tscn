@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://b1x5j4jswej4k"]
+[gd_scene load_steps=12 format=4 uid="uid://b1x5j4jswej4k"]
 
 [ext_resource type="Texture2D" uid="uid://byf278nymsrhc" path="res://Art/tilemapstart.svg" id="1_2b52f"]
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="2_wi846"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cdtgcjbvscgn5" path="res://music/Lost Cities.mp3" id="5_cph7v"]
 [ext_resource type="Script" uid="uid://b5jsg3a66e0wy" path="res://Levels/canvas_modulate.gd" id="5_ya8ts"]
 [ext_resource type="Script" uid="uid://byv2ucj2k5xl2" path="res://Levels/darkinator.gd" id="7_ya8ts"]
+[ext_resource type="PackedScene" uid="uid://b1draqk26rjew" path="res://obelisk.tscn" id="8_whtlt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wi846"]
 texture = ExtResource("1_2b52f")
@@ -162,6 +163,9 @@ script = ExtResource("7_ya8ts")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="darkinator"]
 position = Vector2(-8220, 28260)
 shape = SubResource("RectangleShape2D_whtlt")
+
+[node name="Area2D" parent="." instance=ExtResource("8_whtlt")]
+position = Vector2(-11640, 24480)
 
 [connection signal="body_entered" from="darkinator" to="darkinator" method="_on_body_entered"]
 [connection signal="body_exited" from="darkinator" to="darkinator" method="_on_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://jrjth6r62exr"]
+[gd_scene load_steps=14 format=4 uid="uid://jrjth6r62exr"]
 
 [ext_resource type="AudioStream" uid="uid://d2uurpxfqsqjn" path="res://music/Twisted-fortress.mp3" id="1_clnao"]
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_kwqyq"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="4_nk88g"]
 [ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="5_uo42o"]
 [ext_resource type="PackedScene" uid="uid://qlj4ag15mb2o" path="res://enemywall.tscn" id="6_xgbg2"]
+[ext_resource type="PackedScene" uid="uid://b1draqk26rjew" path="res://obelisk.tscn" id="8_nk88g"]
 [ext_resource type="Script" uid="uid://byv2ucj2k5xl2" path="res://Levels/darkinator.gd" id="9_y8n2b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlhms"]
@@ -214,6 +215,9 @@ script = ExtResource("2_y8n2b")
 
 [node name="Robot-enemy2" parent="." instance=ExtResource("3_y8n2b")]
 position = Vector2(-480, 1440)
+
+[node name="Area2D" parent="Robot-enemy2" instance=ExtResource("8_nk88g")]
+position = Vector2(6360, -540)
 
 [node name="enemywall" parent="." instance=ExtResource("6_xgbg2")]
 position = Vector2(1616, 1824)

@@ -5,7 +5,9 @@ func _on_body_entered(body):
 	if body.name == "Birdley":
 		Globalvars.score+=1
 		print(Globalvars.score)
-		# insert sound here
+		$AudioStreamPlayer.play()
+		hide()
+		await get_tree().create_timer(0.5).timeout
 		queue_free() #uncoins your coin
 
 
@@ -13,5 +15,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.name == "Spear":
 		Globalvars.score+=1
 		print(Globalvars.score)
-		# pretend there's a cooler sound here. like with a cling or something
+		$AudioStreamPlayer2.play()
+		hide()
+		await get_tree().create_timer(0.5).timeout
 		queue_free()

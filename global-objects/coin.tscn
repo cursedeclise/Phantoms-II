@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://ddonpdjkrrdb1"]
+[gd_scene load_steps=14 format=3 uid="uid://ddonpdjkrrdb1"]
 
 [ext_resource type="Script" uid="uid://c5rdsrtim54kv" path="res://coin.gd" id="1_d5gmh"]
-[ext_resource type="Texture2D" uid="uid://b561hh2wqyn5l" path="res://Art/sould.svg" id="2_0t63x"]
+[ext_resource type="Texture2D" uid="uid://c5kex8shy00pf" path="res://Art/sould.svg" id="2_0t63x"]
+[ext_resource type="AudioStream" uid="uid://5yq47cvyqv1x" path="res://music/freesound_community-coin-dropped-81172.mp3" id="3_i3clu"]
+[ext_resource type="AudioStream" uid="uid://bgafwkmcjv11" path="res://music/dragon-studio-sword-clashhit-393837.mp3" id="4_cw6tl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0t63x"]
 atlas = ExtResource("2_0t63x")
@@ -76,6 +78,12 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_d5gmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_i3clu")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cw6tl")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
