@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://b71mrb3s24wq3" path="res://Art/real_drifter(not clickbait)(but tall).svg" id="3_5i0bs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dwd24"]
-radius = 51.0
-height = 238.0
+radius = 42.0
+height = 202.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fsgg3"]
 atlas = ExtResource("2_5i0bs")
@@ -119,14 +119,14 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3aynv"]
-radius = 95.0
+radius = 70.0
 height = 274.0
 
 [node name="DrifterV" type="CharacterBody2D" groups=["takesDamage"]]
 script = ExtResource("1_ngghn")
 
 [node name="groundhitbox" type="CollisionShape2D" parent="."]
-position = Vector2(6, 19)
+position = Vector2(0, 19)
 shape = SubResource("CapsuleShape2D_dwd24")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -139,7 +139,7 @@ collision_mask = 3
 script = ExtResource("3_1t6lp")
 
 [node name="damagehitbox" type="CollisionShape2D" parent="robot" groups=["dealsDamage"]]
-position = Vector2(6, 15)
+position = Vector2(0, 15)
 shape = SubResource("CapsuleShape2D_3aynv")
 
 [connection signal="body_entered" from="robot" to="robot" method="_on_body_entered"]

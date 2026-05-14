@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="4_nk88g"]
 [ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="5_uo42o"]
 [ext_resource type="PackedScene" uid="uid://qlj4ag15mb2o" path="res://enemywall.tscn" id="6_xgbg2"]
-[ext_resource type="Script" path="res://Levels/darkinator.gd" id="9_y8n2b"]
+[ext_resource type="Script" uid="uid://byv2ucj2k5xl2" path="res://Levels/darkinator.gd" id="9_y8n2b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlhms"]
 texture = ExtResource("2_clnao")
@@ -172,6 +172,7 @@ sources/1 = SubResource("TileSetAtlasSource_jlhms")
 size = Vector2(3960, 4222)
 
 [node name="Testingground" type="Node2D"]
+metadata/_edit_lock_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_clnao")
@@ -191,7 +192,7 @@ tile_set = SubResource("TileSet_luj72")
 metadata/_edit_lock_ = true
 
 [node name="Robot-enemy" parent="." instance=ExtResource("3_y8n2b")]
-position = Vector2(1331, 1712)
+position = Vector2(900, 1920)
 
 [node name="coin" parent="." instance=ExtResource("4_nk88g")]
 position = Vector2(1718, 120)
@@ -212,6 +213,7 @@ z_index = 3
 script = ExtResource("2_y8n2b")
 
 [node name="Robot-enemy2" parent="." instance=ExtResource("3_y8n2b")]
+position = Vector2(-480, 1440)
 
 [node name="enemywall" parent="." instance=ExtResource("6_xgbg2")]
 position = Vector2(1616, 1824)
