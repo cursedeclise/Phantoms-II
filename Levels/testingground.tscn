@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://crhp1tnh8pnqx"]
+[gd_scene load_steps=19 format=4 uid="uid://crhp1tnh8pnqx"]
 
 [ext_resource type="AudioStream" uid="uid://mo7agbmdl6le" path="res://music/Blue Sanctum.mp3" id="1_k57rk"]
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_vpocr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="5_ssmhc"]
 [ext_resource type="PackedScene" uid="uid://qlj4ag15mb2o" path="res://enemywall.tscn" id="6_7agld"]
 [ext_resource type="PackedScene" uid="uid://b1draqk26rjew" path="res://obelisk.tscn" id="7_1m157"]
+[ext_resource type="Texture2D" uid="uid://dpy2yf83n4ptx" path="res://Art/tutorialtiles.svg" id="8_jlhms"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlhms"]
 texture = ExtResource("2_1m157")
@@ -166,6 +167,64 @@ tile_size = Vector2i(180, 180)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_jlhms")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_k57rk"]
+atlas = ExtResource("8_jlhms")
+region = Rect2(0, 180, 360, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mild"]
+atlas = ExtResource("8_jlhms")
+region = Rect2(0, 360, 360, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndbvv"]
+atlas = ExtResource("8_jlhms")
+region = Rect2(0, 540, 360, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6w6oa"]
+atlas = ExtResource("8_jlhms")
+region = Rect2(0, 720, 360, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i54pw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k57rk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mild")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndbvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6w6oa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlhms"]
+atlas = ExtResource("8_jlhms")
+region = Rect2(540, 180, 540, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i54pw"]
+atlas = ExtResource("8_jlhms")
+region = Rect2(540, 360, 540, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bocfx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlhms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i54pw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
 [node name="Tutorial" type="Node2D"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -197,5 +256,15 @@ position = Vector2(1616, 1824)
 
 [node name="Area2D" parent="." instance=ExtResource("7_1m157")]
 position = Vector2(8048, -360)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1248, 40)
+sprite_frames = SubResource("SpriteFrames_i54pw")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(2792, 56)
+sprite_frames = SubResource("SpriteFrames_bocfx")
+autoplay = "default"
 
 [connection signal="body_entered" from="coin" to="Birdley" method="_on_area_2d_body_entered"]
