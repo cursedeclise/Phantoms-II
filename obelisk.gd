@@ -15,3 +15,5 @@ func _on_body_entered(body: Node2D) -> void:
 			get_tree().change_scene_to_file("res://Levels/Citadel.tscn")
 		elif get_tree().current_scene.name == "Testingground":
 			get_tree().change_scene_to_file("res://Levels/Death.tscn")
+		elif get_tree().current_scene.name == "Tutorial":
+			get_tree().change_scene_to_file("res://Levels/level_one.tscn")
