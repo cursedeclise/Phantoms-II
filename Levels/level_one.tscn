@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://b1x5j4jswej4k"]
+[gd_scene load_steps=13 format=4 uid="uid://b1x5j4jswej4k"]
 
 [ext_resource type="Texture2D" uid="uid://byf278nymsrhc" path="res://Art/tilemapstart.svg" id="1_2b52f"]
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="2_wi846"]
@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="4_om7uc"]
 [ext_resource type="AudioStream" uid="uid://cdtgcjbvscgn5" path="res://music/Lost Cities.mp3" id="5_cph7v"]
 [ext_resource type="Script" uid="uid://b5jsg3a66e0wy" path="res://Levels/canvas_modulate.gd" id="5_ya8ts"]
-[ext_resource type="Script" uid="uid://byv2ucj2k5xl2" path="res://Levels/darkinator.gd" id="7_ya8ts"]
+[ext_resource type="Script" path="res://Levels/darkinator.gd" id="7_ya8ts"]
 [ext_resource type="PackedScene" uid="uid://b1draqk26rjew" path="res://obelisk.tscn" id="8_whtlt"]
+[ext_resource type="PackedScene" uid="uid://yxl2s8akkjwo" path="res://global-objects/robot_enemy.tscn" id="9_2848f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wi846"]
 texture = ExtResource("1_2b52f")
@@ -166,6 +167,66 @@ shape = SubResource("RectangleShape2D_whtlt")
 
 [node name="Area2D" parent="." instance=ExtResource("8_whtlt")]
 position = Vector2(-11640, 24480)
+
+[node name="Coin2" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(11339, 1308)
+
+[node name="Coin3" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(18307, 2831)
+
+[node name="Coin4" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(5177, 4239)
+
+[node name="Coin5" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(3883, 4442)
+
+[node name="Coin6" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(-1742, 4223)
+
+[node name="Coin7" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(-6081, 1870)
+
+[node name="Coin8" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(-6985, 1895)
+
+[node name="Coin9" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(-7913, 1878)
+
+[node name="Coin10" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(-35737, 18810)
+
+[node name="Coin11" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(-33570, 18288)
+
+[node name="Coin12" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(-31777, 17953)
+
+[node name="Coin13" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(-29590, 18308)
+
+[node name="Coin14" parent="." instance=ExtResource("3_pvy0h")]
+position = Vector2(-27433, 18830)
+
+[node name="drifterH" parent="." instance=ExtResource("9_2848f")]
+position = Vector2(-48268, 9632)
+
+[node name="drifterH2" parent="." instance=ExtResource("9_2848f")]
+position = Vector2(-37211, 9789)
+rotation = 3.1528544
+
+[node name="drifterH3" parent="." instance=ExtResource("9_2848f")]
+position = Vector2(-32668, 16653)
+rotation = -1.6008817
+
+[node name="drifterH4" parent="." instance=ExtResource("9_2848f")]
+position = Vector2(-30429, 16670)
+rotation = 1.5532019
+
+[node name="drifterH5" parent="." instance=ExtResource("9_2848f")]
+position = Vector2(-18985, 5635)
+
+[node name="drifterH6" parent="." instance=ExtResource("9_2848f")]
+position = Vector2(-15998, 4951)
 
 [connection signal="body_entered" from="darkinator" to="darkinator" method="_on_body_entered"]
 [connection signal="body_exited" from="darkinator" to="darkinator" method="_on_body_exited"]
