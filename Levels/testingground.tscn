@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="1_vpocr"]
 [ext_resource type="Texture2D" uid="uid://tkswxa2dtky5" path="res://Art/tilemap-citadel.svg" id="2_1m157"]
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="4_0jwuf"]
-[ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="5_ssmhc"]
+[ext_resource type="Texture2D" uid="uid://docbplr85iykx" path="res://Art/citadelbackground.svg" id="5_k57rk"]
 [ext_resource type="PackedScene" uid="uid://qlj4ag15mb2o" path="res://enemywall.tscn" id="6_7agld"]
 [ext_resource type="PackedScene" uid="uid://b1draqk26rjew" path="res://obelisk.tscn" id="7_1m157"]
 [ext_resource type="PackedScene" uid="uid://yxl2s8akkjwo" path="res://global-objects/robot_enemy.tscn" id="7_k57rk"]
@@ -293,7 +293,7 @@ layer = -1
 
 [node name="Bramblebackground" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(1920, 1080)
-texture = ExtResource("5_ssmhc")
+texture = ExtResource("5_k57rk")
 metadata/_edit_lock_ = true
 
 [node name="enemywall" parent="." instance=ExtResource("6_7agld")]

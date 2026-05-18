@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://xj0w4t7p02a0"]
+[gd_scene load_steps=11 format=3 uid="uid://xj0w4t7p02a0"]
 
 [ext_resource type="Texture2D" uid="uid://c8nfuy37kdyuj" path="res://Art/titlescreen.svg" id="1_u4kg6"]
 [ext_resource type="Texture2D" uid="uid://cyroxsa08ehi" path="res://Art/Button.svg" id="2_nfj55"]
 [ext_resource type="Texture2D" uid="uid://bcbqnnbnbn3o" path="res://Art/ButtonHover.svg" id="3_yiu5k"]
 [ext_resource type="Script" uid="uid://bqgim3oiyqyn1" path="res://Levels/startbutton.gd" id="4_yiu5k"]
 [ext_resource type="Script" uid="uid://bkkkmprtffr3g" path="res://Levels/exitbutton.gd" id="5_fj8iv"]
+[ext_resource type="Script" uid="uid://c0e6aiufy0vni" path="res://Levels/tutorialbutton.gd" id="5_yxog7"]
 [ext_resource type="AudioStream" uid="uid://c8pe8hxia5r8m" path="res://music/Phantoms (title screen).mp3" id="6_ehtth"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fj8iv"]
@@ -50,6 +51,7 @@ offset_right = 2896.0
 offset_bottom = 1537.0
 texture_normal = ExtResource("2_nfj55")
 texture_hover = ExtResource("3_yiu5k")
+script = ExtResource("5_yxog7")
 
 [node name="Label" type="Label" parent="tutorialbutton"]
 layout_mode = 0
@@ -88,4 +90,5 @@ volume_db = 5.5
 autoplay = true
 
 [connection signal="button_down" from="startbutton" to="startbutton" method="_on_button_down"]
+[connection signal="button_down" from="tutorialbutton" to="tutorialbutton" method="_on_button_down"]
 [connection signal="button_down" from="exitbutton" to="exitbutton" method="_on_button_down"]
