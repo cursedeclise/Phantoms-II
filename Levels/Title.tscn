@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://xj0w4t7p02a0"]
+[gd_scene load_steps=12 format=3 uid="uid://xj0w4t7p02a0"]
 
 [ext_resource type="Texture2D" uid="uid://c8nfuy37kdyuj" path="res://Art/titlescreen.svg" id="1_u4kg6"]
 [ext_resource type="Texture2D" uid="uid://cyroxsa08ehi" path="res://Art/Button.svg" id="2_nfj55"]
@@ -16,6 +16,9 @@ font_size = 55
 
 [sub_resource type="LabelSettings" id="LabelSettings_yxog7"]
 font_size = 55
+
+[sub_resource type="LabelSettings" id="LabelSettings_fj31j"]
+font_size = 256
 
 [node name="Node2D" type="Node2D"]
 
@@ -88,6 +91,16 @@ vertical_alignment = 1
 stream = ExtResource("6_ehtth")
 volume_db = 5.5
 autoplay = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1752.0
+offset_top = -24.0
+offset_right = 3661.0
+offset_bottom = 325.0
+text = "P H A N T O M S"
+label_settings = SubResource("LabelSettings_fj31j")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="startbutton" to="startbutton" method="_on_button_down"]
 [connection signal="button_down" from="tutorialbutton" to="tutorialbutton" method="_on_button_down"]

@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://xxqxs2mse4in"]
+[gd_scene load_steps=11 format=3 uid="uid://da5l07d80qu5s"]
 
-[ext_resource type="Texture2D" uid="uid://bwg2k1bvx5lor" path="res://Art/death.svg" id="1_ebp10"]
-[ext_resource type="AudioStream" uid="uid://cl1o2mpf005dp" path="res://music/oroboros.ogg.mp3" id="1_ibfvw"]
-[ext_resource type="Texture2D" uid="uid://cyroxsa08ehi" path="res://Art/Button.svg" id="2_h0wh6"]
-[ext_resource type="Texture2D" uid="uid://bcbqnnbnbn3o" path="res://Art/ButtonHover.svg" id="3_xnjq7"]
-[ext_resource type="Script" uid="uid://dn7wsf64lc1lc" path="res://Levels/startbutton2.gd" id="4_xnjq7"]
-[ext_resource type="Script" uid="uid://cxbhe348jshg1" path="res://Levels/exitbutton2.gd" id="5_ibfvw"]
+[ext_resource type="AudioStream" uid="uid://mo7agbmdl6le" path="res://music/Blue Sanctum.mp3" id="1_t3puq"]
+[ext_resource type="Texture2D" uid="uid://bwg2k1bvx5lor" path="res://Art/death.svg" id="2_0qotv"]
+[ext_resource type="Texture2D" uid="uid://cyroxsa08ehi" path="res://Art/Button.svg" id="3_0w2hl"]
+[ext_resource type="Texture2D" uid="uid://bcbqnnbnbn3o" path="res://Art/ButtonHover.svg" id="4_2kddg"]
+[ext_resource type="Script" uid="uid://dn7wsf64lc1lc" path="res://Levels/startbutton2.gd" id="5_kaa5u"]
+[ext_resource type="Script" uid="uid://cxbhe348jshg1" path="res://Levels/exitbutton2.gd" id="6_l1t66"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xnjq7"]
 font_size = 55
@@ -25,30 +25,30 @@ outline_color = Color(0.61894506, 0, 0, 1)
 [node name="Node2D" type="Node2D"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_ibfvw")
+stream = ExtResource("1_t3puq")
 volume_db = 1.0
 autoplay = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 3850.6667
 offset_bottom = 2166.0
-texture = ExtResource("1_ebp10")
+texture = ExtResource("2_0qotv")
 
 [node name="startbutton" type="TextureButton" parent="."]
 offset_left = 2648.0
 offset_top = 1120.0
 offset_right = 3008.0
 offset_bottom = 1305.0
-texture_normal = ExtResource("2_h0wh6")
-texture_hover = ExtResource("3_xnjq7")
-stretch_mode = 0
-script = ExtResource("4_xnjq7")
+texture_normal = ExtResource("3_0w2hl")
+texture_hover = ExtResource("4_2kddg")
+script = ExtResource("5_kaa5u")
 
 [node name="Label" type="Label" parent="startbutton"]
 layout_mode = 0
-offset_top = 48.0
-offset_right = 360.0
-offset_bottom = 131.0
+offset_left = -68.0
+offset_top = 47.0
+offset_right = 435.0
+offset_bottom = 130.0
 text = "BEGIN AGAIN"
 label_settings = SubResource("LabelSettings_xnjq7")
 horizontal_alignment = 1
@@ -59,9 +59,9 @@ offset_left = 2512.0
 offset_top = 1408.0
 offset_right = 2872.0
 offset_bottom = 1593.0
-texture_normal = ExtResource("2_h0wh6")
-texture_hover = ExtResource("3_xnjq7")
-script = ExtResource("5_ibfvw")
+texture_normal = ExtResource("3_0w2hl")
+texture_hover = ExtResource("4_2kddg")
+script = ExtResource("6_l1t66")
 
 [node name="Label" type="Label" parent="exitbutton"]
 layout_mode = 0
@@ -75,10 +75,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "D E F E A T E D"
+offset_right = 1680.0
+offset_bottom = 342.0
+text = "V I C T O R Y "
 label_settings = SubResource("LabelSettings_h0wh6")
+horizontal_alignment = 1
 uppercase = true
 
 [connection signal="button_down" from="startbutton" to="startbutton" method="_on_button_down"]
