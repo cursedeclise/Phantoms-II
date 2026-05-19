@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b4x0prsxepwha" path="res://Art/bramblebackground.svg" id="5_uo42o"]
 [ext_resource type="PackedScene" uid="uid://qlj4ag15mb2o" path="res://enemywall.tscn" id="6_xgbg2"]
 [ext_resource type="PackedScene" uid="uid://b1draqk26rjew" path="res://obelisk.tscn" id="8_nk88g"]
-[ext_resource type="Script" uid="uid://byv2ucj2k5xl2" path="res://Levels/darkinator.gd" id="9_y8n2b"]
+[ext_resource type="Script" path="res://Levels/darkinator.gd" id="9_y8n2b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlhms"]
 texture = ExtResource("2_clnao")
@@ -226,7 +226,7 @@ script = ExtResource("2_y8n2b")
 position = Vector2(14280, -780)
 
 [node name="enemywall" parent="." instance=ExtResource("6_xgbg2")]
-position = Vector2(5880, 600)
+position = Vector2(18801, -1608)
 
 [node name="darkinator" type="Area2D" parent="."]
 position = Vector2(27420, -9660)
@@ -240,6 +240,42 @@ shape = SubResource("RectangleShape2D_nk88g")
 
 [node name="Area2D" parent="." instance=ExtResource("8_nk88g")]
 position = Vector2(28140, -15300)
+
+[node name="Coin2" parent="." instance=ExtResource("4_nk88g")]
+position = Vector2(20633, 112)
+
+[node name="Coin3" parent="." instance=ExtResource("4_nk88g")]
+position = Vector2(19745, -971)
+
+[node name="Coin4" parent="." instance=ExtResource("4_nk88g")]
+position = Vector2(8715, -3496)
+
+[node name="Coin5" parent="." instance=ExtResource("4_nk88g")]
+position = Vector2(10719, -4395)
+
+[node name="Coin6" parent="." instance=ExtResource("4_nk88g")]
+position = Vector2(8748, -5468)
+
+[node name="Coin7" parent="." instance=ExtResource("4_nk88g")]
+position = Vector2(18282, -5999)
+
+[node name="Coin8" parent="." instance=ExtResource("4_nk88g")]
+position = Vector2(20265, -6486)
+
+[node name="drifterH" parent="." instance=ExtResource("3_y8n2b")]
+position = Vector2(17604, -1698)
+
+[node name="enemywall2" parent="." instance=ExtResource("6_xgbg2")]
+position = Vector2(16228, -1608)
+
+[node name="drifterH2" parent="." instance=ExtResource("3_y8n2b")]
+position = Vector2(12975, -6035)
+
+[node name="enemywall3" parent="." instance=ExtResource("6_xgbg2")]
+position = Vector2(11724, -5941)
+
+[node name="enemywall4" parent="." instance=ExtResource("6_xgbg2")]
+position = Vector2(14145, -5941)
 
 [connection signal="body_entered" from="coin" to="Birdley" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="darkinator" to="darkinator" method="_on_body_entered"]
