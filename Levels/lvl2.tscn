@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://debgkqa2yq4q0"]
+[gd_scene load_steps=19 format=4 uid="uid://debgkqa2yq4q0"]
 
 [ext_resource type="AudioStream" uid="uid://b0symlfdu04r" path="res://music/Gnarp Gnarp.mp3" id="1_5u780"]
 [ext_resource type="Script" uid="uid://b5jsg3a66e0wy" path="res://Levels/canvas_modulate.gd" id="1_jkkvr"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dvnx358d78umq" path="res://Art/Water.svg" id="3_kiu7i"]
 [ext_resource type="Script" uid="uid://b4w1y3fkxbaql" path="res://Levels/water.gd" id="3_y10q8"]
 [ext_resource type="PackedScene" uid="uid://ce85creqdl8vr" path="res://global-objects/watercurrent_up.tscn" id="5_rytll"]
+[ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="8_mxmvt"]
+[ext_resource type="PackedScene" uid="uid://yxl2s8akkjwo" path="res://global-objects/robot_enemy.tscn" id="9_5iydh"]
 [ext_resource type="PackedScene" uid="uid://b1draqk26rjew" path="res://obelisk.tscn" id="9_gf6r3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y10q8"]
@@ -370,6 +372,42 @@ patch_margin_top = 640
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="drifterH" parent="Water" instance=ExtResource("9_5iydh")]
+position = Vector2(12224, 11245)
+
+[node name="drifterH2" parent="Water" instance=ExtResource("9_5iydh")]
+position = Vector2(23093, 809)
+
+[node name="drifterH3" parent="Water" instance=ExtResource("9_5iydh")]
+position = Vector2(21519, 468)
+
+[node name="drifterH4" parent="Water" instance=ExtResource("9_5iydh")]
+position = Vector2(12670, 7430)
+
+[node name="Coin" parent="Water" instance=ExtResource("8_mxmvt")]
+position = Vector2(5145, -2180)
+
+[node name="Coin2" parent="Water" instance=ExtResource("8_mxmvt")]
+position = Vector2(3323, -3058)
+
+[node name="Coin3" parent="Water" instance=ExtResource("8_mxmvt")]
+position = Vector2(5092, -4133)
+
+[node name="Coin4" parent="Water" instance=ExtResource("8_mxmvt")]
+position = Vector2(9602, 10916)
+
+[node name="Coin5" parent="Water" instance=ExtResource("8_mxmvt")]
+position = Vector2(10698, 11853)
+
+[node name="Coin6" parent="Water" instance=ExtResource("8_mxmvt")]
+position = Vector2(12688, 10973)
+
+[node name="Coin7" parent="Water" instance=ExtResource("8_mxmvt")]
+position = Vector2(25999, -1861)
+
+[node name="Coin8" parent="Water" instance=ExtResource("8_mxmvt")]
+position = Vector2(27816, -2784)
+
 [node name="Watercurrent-up" parent="." instance=ExtResource("5_rytll")]
 position = Vector2(22237, 11408)
 
@@ -384,6 +422,27 @@ position = Vector2(23137, 3512)
 
 [node name="Area2D" parent="." instance=ExtResource("9_gf6r3")]
 position = Vector2(30720, -2160)
+
+[node name="drifterH" parent="." instance=ExtResource("9_5iydh")]
+position = Vector2(17555, 1818)
+
+[node name="Coin" parent="." instance=ExtResource("8_mxmvt")]
+position = Vector2(10921, -2613)
+
+[node name="Coin2" parent="." instance=ExtResource("8_mxmvt")]
+position = Vector2(11983, -5275)
+
+[node name="Coin3" parent="." instance=ExtResource("8_mxmvt")]
+position = Vector2(11802, 4783)
+
+[node name="Coin4" parent="." instance=ExtResource("8_mxmvt")]
+position = Vector2(13951, 5303)
+
+[node name="Coin5" parent="." instance=ExtResource("8_mxmvt")]
+position = Vector2(15220, 6629)
+
+[node name="Coin6" parent="." instance=ExtResource("8_mxmvt")]
+position = Vector2(26036, -3278)
 
 [connection signal="body_entered" from="Water" to="Water" method="_on_body_entered"]
 [connection signal="body_exited" from="Water" to="Water" method="_on_body_exited"]

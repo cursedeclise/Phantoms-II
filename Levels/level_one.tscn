@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://b1x5j4jswej4k"]
+[gd_scene load_steps=14 format=4 uid="uid://b1x5j4jswej4k"]
 
 [ext_resource type="Texture2D" uid="uid://byf278nymsrhc" path="res://Art/tilemapstart.svg" id="1_2b52f"]
 [ext_resource type="PackedScene" uid="uid://dj35ut3k6jn6s" path="res://global-objects/birdley.tscn" id="2_wi846"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Levels/darkinator.gd" id="7_ya8ts"]
 [ext_resource type="PackedScene" uid="uid://b1draqk26rjew" path="res://obelisk.tscn" id="8_whtlt"]
 [ext_resource type="PackedScene" uid="uid://yxl2s8akkjwo" path="res://global-objects/robot_enemy.tscn" id="9_2848f"]
+[ext_resource type="PackedScene" uid="uid://qlj4ag15mb2o" path="res://enemywall.tscn" id="10_kmyb2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wi846"]
 texture = ExtResource("1_2b52f")
@@ -227,6 +228,15 @@ position = Vector2(-18985, 5635)
 
 [node name="drifterH6" parent="." instance=ExtResource("9_2848f")]
 position = Vector2(-15998, 4951)
+
+[node name="enemywall" parent="." instance=ExtResource("10_kmyb2")]
+position = Vector2(0, 4297)
+
+[node name="enemywall2" parent="." instance=ExtResource("10_kmyb2")]
+position = Vector2(2616, 4297)
+
+[node name="drifterH7" parent="." instance=ExtResource("9_2848f")]
+position = Vector2(1260, 4284)
 
 [connection signal="body_entered" from="darkinator" to="darkinator" method="_on_body_entered"]
 [connection signal="body_exited" from="darkinator" to="darkinator" method="_on_body_exited"]
