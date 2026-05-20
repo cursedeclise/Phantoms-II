@@ -9,6 +9,13 @@ func _process(delta: float) -> void:
 	if !is_stopped:
 		time_elapsed += delta
 		text = str(time_elapsed).pad_decimals(2) + " s"
+		if Globalvars.level==1:
+			Globalvars.stage1time=time_elapsed
+		if Globalvars.level==2:
+			Globalvars.stage2time=time_elapsed
+		if Globalvars.level==3:
+			Globalvars.stage3time=time_elapsed
+	is_stopped = false
 	if Globalvars.timed==false:
 		stop()
 
