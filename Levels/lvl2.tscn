@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=4 uid="uid://debgkqa2yq4q0"]
+[gd_scene load_steps=21 format=4 uid="uid://debgkqa2yq4q0"]
 
+[ext_resource type="PackedScene" uid="uid://vx8ba3p40yiu" path="res://global-objects/spikes.tscn" id="1_5iydh"]
 [ext_resource type="AudioStream" uid="uid://b0symlfdu04r" path="res://music/Gnarp Gnarp.mp3" id="1_5u780"]
 [ext_resource type="Script" uid="uid://b5jsg3a66e0wy" path="res://Levels/canvas_modulate.gd" id="1_jkkvr"]
 [ext_resource type="Texture2D" uid="uid://rlifoib0yrly" path="res://Art/tilemapwater.svg" id="1_m3g7l"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ddonpdjkrrdb1" path="res://global-objects/coin.tscn" id="8_mxmvt"]
 [ext_resource type="PackedScene" uid="uid://yxl2s8akkjwo" path="res://global-objects/robot_enemy.tscn" id="9_5iydh"]
 [ext_resource type="PackedScene" uid="uid://b1draqk26rjew" path="res://obelisk.tscn" id="9_gf6r3"]
+[ext_resource type="PackedScene" uid="uid://bi4ircuvhuqnm" path="res://Levels/drifter-vert.tscn" id="13_535v1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y10q8"]
 texture = ExtResource("1_m3g7l")
@@ -214,8 +216,157 @@ size = Vector2(214233, 74889)
 
 [node name="Node2D" type="Node2D"]
 
+[node name="spikes" type="Node" parent="."]
+
+[node name="Spikes" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(2520, -360)
+
+[node name="Spikes2" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(8580, 5220)
+
+[node name="Spikes36" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(5760, 11340)
+
+[node name="Spikes3" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(10260, 540)
+
+[node name="Spikes4" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(10980, 540)
+
+[node name="Spikes5" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(12960, 540)
+
+[node name="Spikes6" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(12240, 540)
+
+[node name="Spikes34" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(10980, 9000)
+
+[node name="Spikes35" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(11700, 9000)
+
+[node name="Spikes7" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(9000, 360)
+rotation = 1.5707964
+
+[node name="Spikes8" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(9180, 1980)
+rotation = -1.5707964
+
+[node name="Spikes9" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(6660, 6660)
+rotation = -1.5707964
+
+[node name="Spikes10" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(6660, 7380)
+rotation = -1.5707964
+
+[node name="Spikes11" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(6660, 8100)
+rotation = -1.5707964
+
+[node name="Spikes12" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(11340, 12960)
+rotation = -1.5707964
+
+[node name="Spikes14" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(15660, 13140)
+rotation = -1.5707964
+
+[node name="Spikes15" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(18900, 12240)
+rotation = -1.5707964
+
+[node name="Spikes32" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(16380, 7560)
+rotation = -1.5707964
+
+[node name="Spikes33" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(16380, 8280)
+rotation = -1.5707964
+
+[node name="Spikes16" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(21060, 6840)
+rotation = 1.5707964
+
+[node name="Spikes17" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(21060, -2160)
+rotation = 1.5707964
+
+[node name="Spikes19" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(10080, 7020)
+rotation = 1.5707964
+
+[node name="Spikes20" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(6660, 11640)
+rotation = 1.5707964
+
+[node name="Spikes21" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(8280, 12720)
+rotation = 1.5707964
+
+[node name="Spikes22" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(8640, 10440)
+rotation = -3.1415925
+
+[node name="Spikes23" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(9360, 10440)
+rotation = -3.1415925
+
+[node name="Spikes24" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(10620, 10440)
+rotation = -3.1415925
+
+[node name="Spikes25" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(11520, 10440)
+rotation = -3.1415925
+
+[node name="Spikes26" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(13500, 10440)
+rotation = -3.1415925
+
+[node name="Spikes27" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(14220, 10440)
+rotation = -3.1415925
+
+[node name="Spikes28" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(19260, 10080)
+rotation = -3.1415925
+
+[node name="Spikes29" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(12600, 3600)
+rotation = -3.1415925
+
+[node name="Spikes30" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(13320, 3600)
+rotation = -3.1415925
+
+[node name="Spikes31" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(16020, 3240)
+rotation = -3.1415925
+
+[node name="Spikes18" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(21060, 5580)
+rotation = 1.5707964
+
+[node name="Spikes13" parent="spikes" instance=ExtResource("1_5iydh")]
+position = Vector2(11340, 13680)
+rotation = -1.5707964
+
 [node name="drifterH2" parent="." instance=ExtResource("9_5iydh")]
 position = Vector2(12232, 11559)
+
+[node name="drifterH7" parent="." instance=ExtResource("9_5iydh")]
+position = Vector2(10980, 6720)
+
+[node name="drifterH8" parent="." instance=ExtResource("9_5iydh")]
+position = Vector2(13380, 5640)
+
+[node name="drifterH9" parent="." instance=ExtResource("9_5iydh")]
+position = Vector2(15900, 5460)
+
+[node name="drifterH6" parent="." instance=ExtResource("9_5iydh")]
+position = Vector2(10140, 12540)
 
 [node name="drifterH3" parent="." instance=ExtResource("9_5iydh")]
 position = Vector2(23101, 1123)
@@ -414,11 +565,8 @@ position = Vector2(22237, 11408)
 [node name="Watercurrent-up2" parent="." instance=ExtResource("5_rytll")]
 position = Vector2(22769, 8735)
 
-[node name="Watercurrent-up3" parent="." instance=ExtResource("5_rytll")]
-position = Vector2(21161, 6243)
-
 [node name="Watercurrent-up4" parent="." instance=ExtResource("5_rytll")]
-position = Vector2(23137, 3512)
+position = Vector2(23100, 3480)
 
 [node name="Area2D" parent="." instance=ExtResource("9_gf6r3")]
 position = Vector2(30720, -2160)
@@ -443,6 +591,24 @@ position = Vector2(15220, 6629)
 
 [node name="Coin6" parent="." instance=ExtResource("8_mxmvt")]
 position = Vector2(26036, -3278)
+
+[node name="DrifterV" parent="." instance=ExtResource("13_535v1")]
+position = Vector2(7500, 10740)
+
+[node name="DrifterV2" parent="." instance=ExtResource("13_535v1")]
+position = Vector2(7740, 11640)
+
+[node name="DrifterV3" parent="." instance=ExtResource("13_535v1")]
+position = Vector2(14700, 10440)
+
+[node name="DrifterV4" parent="." instance=ExtResource("13_535v1")]
+position = Vector2(17820, 10320)
+
+[node name="DrifterV5" parent="." instance=ExtResource("13_535v1")]
+position = Vector2(13920, 6420)
+
+[node name="DrifterV6" parent="." instance=ExtResource("13_535v1")]
+position = Vector2(11580, 3840)
 
 [connection signal="body_entered" from="Water" to="Water" method="_on_body_entered"]
 [connection signal="body_exited" from="Water" to="Water" method="_on_body_exited"]

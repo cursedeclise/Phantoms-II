@@ -29,5 +29,6 @@ func _on_area_entered(area: Area2D) -> void:
 		print("iframes off")
 
 	if Globalvars.playerhealth==0:
+		get_tree().paused=false
 		get_tree().change_scene_to_file("res://Levels/Death.tscn")
 		pass
