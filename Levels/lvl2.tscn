@@ -214,6 +214,18 @@ size = Vector2(214233, 74889)
 
 [node name="Node2D" type="Node2D"]
 
+[node name="drifterH2" parent="." instance=ExtResource("9_5iydh")]
+position = Vector2(12232, 11559)
+
+[node name="drifterH3" parent="." instance=ExtResource("9_5iydh")]
+position = Vector2(23101, 1123)
+
+[node name="drifterH4" parent="." instance=ExtResource("9_5iydh")]
+position = Vector2(21527, 782)
+
+[node name="drifterH5" parent="." instance=ExtResource("9_5iydh")]
+position = Vector2(12678, 7744)
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 z_index = 3
 script = ExtResource("1_jkkvr")
@@ -371,18 +383,6 @@ texture = ExtResource("3_kiu7i")
 patch_margin_top = 640
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
-
-[node name="drifterH" parent="Water" instance=ExtResource("9_5iydh")]
-position = Vector2(12224, 11245)
-
-[node name="drifterH2" parent="Water" instance=ExtResource("9_5iydh")]
-position = Vector2(23093, 809)
-
-[node name="drifterH3" parent="Water" instance=ExtResource("9_5iydh")]
-position = Vector2(21519, 468)
-
-[node name="drifterH4" parent="Water" instance=ExtResource("9_5iydh")]
-position = Vector2(12670, 7430)
 
 [node name="Coin" parent="Water" instance=ExtResource("8_mxmvt")]
 position = Vector2(5145, -2180)
