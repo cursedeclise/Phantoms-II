@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://vx8ba3p40yiu"]
+
+[ext_resource type="Texture2D" uid="uid://doy43rmsephwl" path="res://Art/spik.svg" id="1_fyo5i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kt5v"]
+size = Vector2(720, 60)
+
+[node name="Spikes" type="Area2D" groups=["dealsDamage"]]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_right = 720.0
+offset_bottom = 180.0
+texture = ExtResource("1_fyo5i")
+region_rect = Rect2(0, 0, 180, 180)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(360, 150)
+shape = SubResource("RectangleShape2D_4kt5v")
