@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://da5l07d80qu5s"]
+[gd_scene load_steps=16 format=3 uid="uid://da5l07d80qu5s"]
 
 [ext_resource type="AudioStream" uid="uid://mo7agbmdl6le" path="res://music/Blue Sanctum.mp3" id="1_t3puq"]
 [ext_resource type="Texture2D" uid="uid://bwg2k1bvx5lor" path="res://Art/death.svg" id="2_0qotv"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bcbqnnbnbn3o" path="res://Art/ButtonHover.svg" id="4_2kddg"]
 [ext_resource type="Script" uid="uid://dn7wsf64lc1lc" path="res://Levels/startbutton2.gd" id="5_kaa5u"]
 [ext_resource type="Script" uid="uid://cxbhe348jshg1" path="res://Levels/exitbutton2.gd" id="6_l1t66"]
+[ext_resource type="Script" uid="uid://crvdoi1ervu20" path="res://levle_1_time.gd" id="7_0qotv"]
+[ext_resource type="Script" uid="uid://ca8badi62hece" path="res://level_3_time.gd" id="8_kaa5u"]
+[ext_resource type="Script" uid="uid://cal66n44ihp7o" path="res://score.gd" id="9_l1t66"]
+[ext_resource type="Script" uid="uid://k8vbh8iobnj8" path="res://level_2_time.gd" id="10_mjpds"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xnjq7"]
 font_size = 55
@@ -21,6 +25,9 @@ font_size = 250
 font_color = Color(0.24712136, 0.24711949, 0.2604366, 1)
 outline_size = 15
 outline_color = Color(0.61894506, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0w2hl"]
+font_size = 60
 
 [node name="Node2D" type="Node2D"]
 
@@ -81,6 +88,46 @@ text = "V I C T O R Y "
 label_settings = SubResource("LabelSettings_h0wh6")
 horizontal_alignment = 1
 uppercase = true
+
+[node name="levle1time" type="Label" parent="."]
+offset_top = 420.0
+offset_right = 1920.0
+offset_bottom = 503.0
+text = "time"
+label_settings = SubResource("LabelSettings_0w2hl")
+horizontal_alignment = 1
+uppercase = true
+script = ExtResource("7_0qotv")
+
+[node name="level3time" type="Label" parent="."]
+offset_top = 660.0
+offset_right = 1920.0
+offset_bottom = 743.0
+text = "time"
+label_settings = SubResource("LabelSettings_0w2hl")
+horizontal_alignment = 1
+uppercase = true
+script = ExtResource("8_kaa5u")
+
+[node name="score" type="Label" parent="."]
+offset_top = 780.0
+offset_right = 1920.0
+offset_bottom = 863.0
+text = "time"
+label_settings = SubResource("LabelSettings_0w2hl")
+horizontal_alignment = 1
+uppercase = true
+script = ExtResource("9_l1t66")
+
+[node name="level2time" type="Label" parent="."]
+offset_top = 540.0
+offset_right = 1920.0
+offset_bottom = 623.0
+text = "time"
+label_settings = SubResource("LabelSettings_0w2hl")
+horizontal_alignment = 1
+uppercase = true
+script = ExtResource("10_mjpds")
 
 [connection signal="button_down" from="startbutton" to="startbutton" method="_on_button_down"]
 [connection signal="button_down" from="exitbutton" to="exitbutton" method="_on_button_down"]

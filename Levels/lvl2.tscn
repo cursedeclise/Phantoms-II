@@ -565,11 +565,8 @@ position = Vector2(22237, 11408)
 [node name="Watercurrent-up2" parent="." instance=ExtResource("5_rytll")]
 position = Vector2(22769, 8735)
 
-[node name="Watercurrent-up3" parent="." instance=ExtResource("5_rytll")]
-position = Vector2(21161, 6243)
-
 [node name="Watercurrent-up4" parent="." instance=ExtResource("5_rytll")]
-position = Vector2(23137, 3512)
+position = Vector2(23100, 3480)
 
 [node name="Area2D" parent="." instance=ExtResource("9_gf6r3")]
 position = Vector2(30720, -2160)
