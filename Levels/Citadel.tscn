@@ -218,6 +218,27 @@ position = Vector2(17220, 1500)
 [node name="Robot-enemy" parent="." instance=ExtResource("3_y8n2b")]
 position = Vector2(8760, 120)
 
+[node name="Robot-enemy3" parent="." instance=ExtResource("3_y8n2b")]
+position = Vector2(24900, -6240)
+
+[node name="Robot-enemy4" parent="." instance=ExtResource("3_y8n2b")]
+position = Vector2(27480, -7680)
+
+[node name="Robot-enemy5" parent="." instance=ExtResource("3_y8n2b")]
+position = Vector2(27060, -5100)
+
+[node name="Robot-enemy6" parent="." instance=ExtResource("3_y8n2b")]
+position = Vector2(30300, -9780)
+
+[node name="Robot-enemy7" parent="." instance=ExtResource("3_y8n2b")]
+position = Vector2(27540, -9780)
+
+[node name="Robot-enemy8" parent="." instance=ExtResource("3_y8n2b")]
+position = Vector2(25380, -13200)
+
+[node name="Robot-enemy9" parent="." instance=ExtResource("3_y8n2b")]
+position = Vector2(24960, -12360)
+
 [node name="Coin" parent="." instance=ExtResource("4_nk88g")]
 position = Vector2(2340, 1140)
 
